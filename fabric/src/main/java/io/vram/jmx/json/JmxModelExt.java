@@ -25,7 +25,6 @@ import java.util.function.Function;
 import com.google.gson.JsonObject;
 
 import net.minecraft.client.renderer.block.model.BlockModel;
-import net.minecraft.client.renderer.block.model.FaceBakery;
 import net.minecraft.client.renderer.block.model.ItemOverrides;
 import net.minecraft.client.renderer.texture.TextureAtlasSprite;
 import net.minecraft.client.resources.model.BakedModel;
@@ -34,7 +33,6 @@ import net.minecraft.client.resources.model.ModelState;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.GsonHelper;
 
-import io.vram.jmx.json.model.BakedQuadFactoryExt;
 import io.vram.jmx.json.v0.JmxModelExtV0;
 import io.vram.jmx.json.v1.JmxModelExtV1;
 
@@ -78,7 +76,4 @@ public abstract class JmxModelExt<Self extends JmxModelExt<Self>> {
 	public abstract boolean selfIsEmpty();
 
 	public abstract BakedModel buildModel(ItemOverrides modelOverrideList, boolean hasDepth, TextureAtlasSprite particleSprite, ModelState bakeProps, ResourceLocation modelId, BlockModel me, Function<Material, TextureAtlasSprite> textureGetter);
-
-	protected static final FaceBakery QUADFACTORY = new FaceBakery();
-	protected static final BakedQuadFactoryExt QUADFACTORY_EXT = (BakedQuadFactoryExt) QUADFACTORY;
 }

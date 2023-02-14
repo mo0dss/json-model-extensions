@@ -1,18 +1,17 @@
 {
-	"required": true,
-	"minVersion": "0.8",
-	"package": "io.vram.jmx.mixin",
-	"compatibilityLevel": "JAVA_16",
-	"client": [
-		"MixinBlockElementFace",
-		"MixinBlockElementFaceDeserializer",
-		"MixinBlockModel",
-		"MixinBlockModelDeserializer",
-		"MixinFaceBakery",
-		"MixinModelManager",
-		"MixinSingleFile"
-	],
-	"injectors": {
-		"defaultRequire": 1
-	}
+  "required": true,
+  "minVersion": "0.8",
+  "package": "io.vram.jmx.mixin",
+  "compatibilityLevel": "JAVA_16",
+  "client": [
+	"MixinBlockElementFace",
+	"MixinBlockElementFaceDeserializer",
+	"MixinBlockModel",
+	"MixinBlockModelDeserializer",
+	"MixinFaceBakery",
+	"MixinSingleFile"
+  ],
+  "injectors": {
+	"defaultRequire": 1
+  }
 }

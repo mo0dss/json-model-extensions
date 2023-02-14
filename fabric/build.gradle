@@ -15,7 +15,11 @@ plugins {
 	id 'com.matthewprenger.cursegradle' version '1.4.0'
 	id 'checkstyle'
 	id 'com.modrinth.minotaur' version '2.2.0'
+	id 'io.github.juuxel.loom-quiltflower' version '1.8.0'
 }
+
+sourceCompatibility = JavaVersion.VERSION_17
+targetCompatibility = JavaVersion.VERSION_17
 
 ext.platform_name = 'fabric'
 ext.loader_version = '0.14.11'

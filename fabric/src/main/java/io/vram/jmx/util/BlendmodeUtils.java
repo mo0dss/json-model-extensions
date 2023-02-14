@@ -18,18 +18,10 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package io.vram.jmx.json.model;
+package io.vram.jmx.util;
 
-import net.minecraft.client.renderer.block.model.BlockElement;
-import net.minecraft.client.renderer.block.model.BlockElementFace;
-import net.minecraft.client.renderer.block.model.BlockFaceUV;
-import net.minecraft.client.renderer.texture.TextureAtlasSprite;
-import net.minecraft.client.resources.model.ModelState;
-import net.minecraft.core.Direction;
-import net.minecraft.resources.ResourceLocation;
+import net.fabricmc.fabric.api.renderer.v1.material.BlendMode;
 
-import io.vram.frex.api.buffer.QuadEmitter;
-
-public interface BakedQuadFactoryExt {
-	void jmx_bake(QuadEmitter q, int spriteIndex, BlockElement element, BlockElementFace elementFace, BlockFaceUV tex, TextureAtlasSprite sprite, Direction face, ModelState modelBakeSettings, ResourceLocation modelId);
+public class BlendmodeUtils {
+    public static final BlendMode[] BLEND_MODES = BlendMode.values();
 }

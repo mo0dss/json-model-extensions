@@ -27,7 +27,13 @@ import java.util.function.Function;
 
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
+import io.vram.jmx.json.JMXFaceBakery;
+import io.vram.jmx.util.BlendmodeUtils;
 import it.unimi.dsi.fastutil.objects.Object2ObjectOpenHashMap;
+import net.fabricmc.fabric.api.renderer.v1.RendererAccess;
+import net.fabricmc.fabric.api.renderer.v1.material.MaterialFinder;
+import net.fabricmc.fabric.api.renderer.v1.material.RenderMaterial;
+import net.fabricmc.fabric.api.renderer.v1.mesh.QuadEmitter;
 import org.jetbrains.annotations.Nullable;
 
 import net.minecraft.client.renderer.block.model.BlockElement;
@@ -44,10 +50,6 @@ import net.minecraft.core.Direction;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.GsonHelper;
 
-import io.vram.frex.api.buffer.QuadEmitter;
-import io.vram.frex.api.material.MaterialFinder;
-import io.vram.frex.api.material.RenderMaterial;
-import io.vram.frex.api.renderer.Renderer;
 import io.vram.jmx.JsonModelExtensions;
 import io.vram.jmx.json.JmxModelExt;
 import io.vram.jmx.json.ext.JmxExtension;
@@ -176,7 +178,7 @@ public class JmxModelExtV0 extends JmxModelExt<JmxModelExtV0> {
 		final JmxBakedModel.Builder builder = (new JmxBakedModel.Builder(me, modelOverrideList, hasDepth, getQuadTransformId()))
 				.setParticle(particleSprite);
 
-		final MaterialFinder finder = Renderer.get().materials().materialFinder();
+		final MaterialFinder finder = RendererAccess.INSTANCE.getRenderer().materialFinder();
 
 		for (final BlockElement element : me.getElements()) {
 			for (final Direction face : element.faces.keySet()) {
@@ -224,10 +226,10 @@ public class JmxModelExtV0 extends JmxModelExt<JmxModelExtV0> {
 
 			final BlockFaceUV texData = extData.getTexData(spriteIndex, elementFace.uv);
 
-			QUADFACTORY_EXT.jmx_bake(emitter, 0, element, elementFace, texData, sprite, face, bakeProps, modelId);
+			JMXFaceBakery.bake(emitter, 0, element, elementFace, texData, sprite, face, bakeProps, modelId);
 
 			final int color = jmxMat.getColor(spriteIndex);
-			emitter.vertexColor(color, color, color, color);
+			emitter.spriteColor(0, color, color, color, color);
 
 			emitter.colorIndex(elementFace.tintIndex);
 
@@ -257,22 +259,22 @@ public class JmxModelExtV0 extends JmxModelExt<JmxModelExtV0> {
 
 		final Boolean diffuse = jmxMat.getDiffuse(spriteIndex);
 		final boolean disableDiffuse = diffuse == null ? !element.shade : !diffuse;
-		finder.disableDiffuse(disableDiffuse);
+		finder.disableDiffuse(0, disableDiffuse);
 
 		final Boolean ao = jmxMat.getAo(spriteIndex);
 		final boolean disableAo = ao == null ? !usesAo : !ao;
-		finder.disableAo(disableAo);
+		finder.disableAo(0, disableAo);
 
 		final Boolean emissive = jmxMat.getEmissive(spriteIndex);
-		finder.emissive(emissive == null ? false : emissive);
+		finder.emissive(0, emissive == null ? false : emissive);
 
 		final Boolean colorIndex = jmxMat.getColorIndex(spriteIndex);
 
 		if (colorIndex != null && !colorIndex) {
-			finder.disableColorIndex(true);
+			finder.disableColorIndex(0, true);
 		}
 
-		finder.preset(jmxMat.getLayer(spriteIndex));
+		finder.blendMode(0, BlendmodeUtils.BLEND_MODES[jmxMat.getLayer(spriteIndex)]);
 
 		return finder.find();
 	}

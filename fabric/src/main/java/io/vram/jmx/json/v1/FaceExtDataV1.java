@@ -73,7 +73,7 @@ public class FaceExtDataV1 extends FaceExtData {
 	public static final FaceExtDataV1 EMPTY = new FaceExtDataV1();
 
 	private FaceExtDataV1() {
-		layers = new LayerData[] {LayerData.EMPTY };
+		layers = new LayerData[] { LayerData.EMPTY };
 	}
 
 	private FaceExtDataV1(JsonObject jsonObj, JsonDeserializationContext context) {

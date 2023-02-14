@@ -22,8 +22,19 @@ package io.vram.jmx.json.model;
 
 import java.lang.ref.WeakReference;
 import java.util.List;
+import java.util.function.Supplier;
 
 import com.google.common.collect.ImmutableList;
+import net.fabricmc.fabric.api.renderer.v1.RendererAccess;
+import net.fabricmc.fabric.api.renderer.v1.mesh.Mesh;
+import net.fabricmc.fabric.api.renderer.v1.mesh.MeshBuilder;
+import net.fabricmc.fabric.api.renderer.v1.mesh.QuadEmitter;
+import net.fabricmc.fabric.api.renderer.v1.model.FabricBakedModel;
+import net.fabricmc.fabric.api.renderer.v1.model.ModelHelper;
+import net.fabricmc.fabric.api.renderer.v1.render.RenderContext;
+import net.minecraft.core.BlockPos;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.BlockAndTintGetter;
 import org.jetbrains.annotations.Nullable;
 
 import net.minecraft.client.renderer.block.model.BakedQuad;
@@ -37,15 +48,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.block.state.BlockState;
 
-import io.vram.frex.api.buffer.QuadEmitter;
-import io.vram.frex.api.buffer.QuadSink;
-import io.vram.frex.api.mesh.Mesh;
-import io.vram.frex.api.mesh.MeshBuilder;
-import io.vram.frex.api.model.BlockItemModel;
-import io.vram.frex.api.model.util.BakedModelUtil;
-import io.vram.frex.api.renderer.Renderer;
-
-public class JmxBakedModel implements BakedModel, BlockItemModel {
+public class JmxBakedModel implements BakedModel, FabricBakedModel {
 	protected final Mesh mesh;
 	protected WeakReference<List<BakedQuad>[]> quadLists = null;
 	protected final boolean usesAo;
@@ -74,13 +77,13 @@ public class JmxBakedModel implements BakedModel, BlockItemModel {
 			quadLists = new WeakReference<>(lists);
 		}
 
-		final List<BakedQuad> result = lists[face == null ? 6 : face.get3DDataValue()];
+		final List<BakedQuad> result = lists[face == null ? ModelHelper.NULL_FACE_ID : face.get3DDataValue()];
 		return result == null ? ImmutableList.of() : result;
 	}
 
 	private static List<BakedQuad>[] toQuadLists(Mesh mesh, TextureAtlasSprite particleSprite) {
 		try {
-			return BakedModelUtil.toQuadLists(mesh);
+			return ModelHelper.toQuadLists(mesh);
 		} catch (final Exception e) {
 			return safeToQuadLists(mesh, particleSprite);
 		}
@@ -103,7 +106,7 @@ public class JmxBakedModel implements BakedModel, BlockItemModel {
 		if (mesh != null) {
 			mesh.forEach(q -> {
 				final Direction face = q.cullFace();
-				builders[face == null ? 6 : face.get3DDataValue()].add(q.toBakedQuad(particleSprite));
+				builders[face == null ? ModelHelper.NULL_FACE_ID : face.get3DDataValue()].add(q.toBakedQuad(0, particleSprite, false));
 			});
 		}
 
@@ -169,7 +172,7 @@ public class JmxBakedModel implements BakedModel, BlockItemModel {
 		}
 
 		private Builder(boolean usesAo, boolean isSideLit, ItemTransforms transformation, ItemOverrides itemPropertyOverrides, boolean hasDepth, @Nullable ResourceLocation quadTransformId) {
-			meshBuilder = Renderer.get().meshBuilder();
+			meshBuilder = RendererAccess.INSTANCE.getRenderer().meshBuilder();
 			emitter = meshBuilder.getEmitter();
 			this.itemPropertyOverrides = itemPropertyOverrides;
 			this.usesAo = usesAo;
@@ -194,16 +197,21 @@ public class JmxBakedModel implements BakedModel, BlockItemModel {
 	}
 
 	@Override
-	public void renderAsBlock(BlockInputContext input, QuadSink output) {
-		if (mesh != null) {
-			mesh.outputTo(output.asQuadEmitter());
+	public boolean isVanillaAdapter() {
+		return false;
+	}
+
+	@Override
+	public void emitBlockQuads(BlockAndTintGetter blockView, BlockState state, BlockPos pos, Supplier<RandomSource> randomSupplier, RenderContext context) {
+		if(this.mesh != null) {
+			context.meshConsumer().accept(this.mesh);
 		}
 	}
 
 	@Override
-	public void renderAsItem(ItemInputContext input, QuadSink output) {
-		if (mesh != null) {
-			mesh.outputTo(output.asQuadEmitter());
+	public void emitItemQuads(ItemStack stack, Supplier<RandomSource> randomSupplier, RenderContext context) {
+		if(this.mesh != null) {
+			context.meshConsumer().accept(this.mesh);
 		}
 	}
 }

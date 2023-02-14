@@ -18,17 +18,11 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package io.vram.jmx.json.model;
+package io.vram.jmx.json;
 
-public class BakedQuadFactoryHelper {
-	public static final int UV_LEN = 4;
-	private static final ThreadLocal<BakedQuadFactoryHelper> HELPERS = ThreadLocal.withInitial(BakedQuadFactoryHelper::new);
+public class BlockElementQuadData {
 
-	public static BakedQuadFactoryHelper get() {
-		return HELPERS.get();
-	}
-
-	public final int[] data = new int[32];
-	public final float[] uv = new float[UV_LEN];
-	public final float[] pos = new float[6];
+    public final int[] data = new int[32];
+    public final float[] uv = new float[4];
+    public final float[] pos = new float[6];
 }

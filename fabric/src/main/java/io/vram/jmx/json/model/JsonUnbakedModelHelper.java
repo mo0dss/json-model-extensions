@@ -20,13 +20,13 @@
 
 package io.vram.jmx.json.model;
 
-import java.util.HashMap;
 import java.util.Map;
 
 import com.google.common.collect.ImmutableMap;
 
 import com.mojang.datafixers.util.Either;
 
+import it.unimi.dsi.fastutil.objects.Object2ObjectOpenHashMap;
 import net.minecraft.client.renderer.block.model.BlockModel;
 import net.minecraft.client.renderer.block.model.ItemModelGenerator;
 import net.minecraft.client.resources.model.Material;
@@ -53,19 +53,17 @@ public class JsonUnbakedModelHelper {
 	}
 
 	public static Map<String, Either<Material, String>> remapTextureMap(Map<String, Either<Material, String>> mapIn, Map<ResourceLocation, ResourceLocation> textureMap) {
-		final Map<String, Either<Material, String>> result = new HashMap<>();
+		final Map<String, Either<Material, String>> result = new Object2ObjectOpenHashMap<>();
 
 		for (final Map.Entry<String, Either<Material, String>> entry : mapIn.entrySet()) {
 			if (entry.getValue().left().isPresent()) {
 				final Material oldId = entry.getValue().left().get();
 
-				if (oldId != null) {
-					final ResourceLocation remapId = textureMap.get(oldId.texture());
+				final ResourceLocation remapId = textureMap.get(oldId.texture());
 
-					if (remapId != null) {
-						result.put(entry.getKey(), Either.left(new Material(oldId.atlasLocation(), remapId)));
-						continue;
-					}
+				if (remapId != null) {
+					result.put(entry.getKey(), Either.left(new Material(oldId.atlasLocation(), remapId)));
+					continue;
 				}
 			}
 

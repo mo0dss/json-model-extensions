@@ -31,7 +31,11 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.JsonPrimitive;
+import io.vram.jmx.json.JMXFaceBakery;
 import it.unimi.dsi.fastutil.objects.Object2ObjectOpenHashMap;
+import net.fabricmc.fabric.api.renderer.v1.RendererAccess;
+import net.fabricmc.fabric.api.renderer.v1.material.RenderMaterial;
+import net.fabricmc.fabric.api.renderer.v1.mesh.QuadEmitter;
 import org.apache.commons.lang3.ObjectUtils;
 import org.jetbrains.annotations.Nullable;
 
@@ -51,14 +55,10 @@ import net.minecraft.core.Direction;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.GsonHelper;
 
-import io.vram.frex.api.buffer.QuadEmitter;
-import io.vram.frex.api.material.MaterialLoader;
-import io.vram.frex.api.material.RenderMaterial;
 import io.vram.jmx.Configurator;
 import io.vram.jmx.JsonModelExtensions;
 import io.vram.jmx.json.JmxModelExt;
 import io.vram.jmx.json.ext.JmxExtension;
-import io.vram.jmx.json.model.BakedQuadFactoryExt;
 import io.vram.jmx.json.model.JmxBakedModel;
 
 public class JmxModelExtV1 extends JmxModelExt<JmxModelExtV1> {
@@ -103,7 +103,7 @@ public class JmxModelExtV1 extends JmxModelExt<JmxModelExtV1> {
 					cullFace = null;
 				}
 
-				emitFace(builder.emitter, QUADFACTORY_EXT, cullFace, me::getMaterial, textureGetter, element, elementFace, face, bakeProps, modelId);
+				emitFace(builder.emitter, cullFace, me::getMaterial, textureGetter, element, elementFace, face, bakeProps, modelId);
 			}
 		}
 
@@ -143,7 +143,7 @@ public class JmxModelExtV1 extends JmxModelExt<JmxModelExtV1> {
 		return this.resolve(
 			name,
 			ext -> ext.materialMap,
-			MaterialLoader::getOrLoadMaterial
+			RendererAccess.INSTANCE.getRenderer()::materialById
 		);
 	}
 
@@ -189,7 +189,6 @@ public class JmxModelExtV1 extends JmxModelExt<JmxModelExtV1> {
 
 	public void emitFace(
 			QuadEmitter emitter,
-			BakedQuadFactoryExt quadFactoryExt,
 			Direction cullFace,
 			Function<String, Material> resolver,
 			Function<Material, TextureAtlasSprite> textureGetter,
@@ -236,7 +235,7 @@ public class JmxModelExtV1 extends JmxModelExt<JmxModelExtV1> {
 				texData = ObjectUtils.defaultIfNull(layer.texData, elementFace.uv);
 			}
 
-			quadFactoryExt.jmx_bake(emitter, 0, element, elementFace, texData, sprite, face, bakeProps, modelId);
+			JMXFaceBakery.bake(emitter, 0, element, elementFace, texData, sprite, face, bakeProps, modelId);
 
 			if (layer != null) {
 				if (layer.material != null) {
@@ -271,7 +270,7 @@ public class JmxModelExtV1 extends JmxModelExt<JmxModelExtV1> {
 					final Optional<Integer> color = resolveColor(layer.color);
 
 					if (color.isPresent()) {
-						emitter.vertexColor(color.get(), color.get(), color.get(), color.get());
+						emitter.spriteColor(0, color.get(), color.get(), color.get(), color.get());
 					} else {
 						HAS_ERROR = true;
 
@@ -338,7 +337,7 @@ public class JmxModelExtV1 extends JmxModelExt<JmxModelExtV1> {
 	}
 
 	private static JmxModelExtV1 deserializeInner(JsonObject obj) {
-		final Map<String, Either<String, ResourceLocation>> materials = deserializeLayers(obj, "materials", el -> new ResourceLocation(el.getAsString()), RenderMaterial.STANDARD_MATERIAL_KEY);
+		final Map<String, Either<String, ResourceLocation>> materials = deserializeLayers(obj, "materials", el -> new ResourceLocation(el.getAsString()), RenderMaterial.MATERIAL_STANDARD);
 		final Map<String, Either<String, Integer>> tags = deserializeLayers(obj, "tags", JsonElement::getAsInt, 0);
 		final Map<String, Either<String, Integer>> colors = deserializeLayers(obj, "colors", JmxModelExtV1::parseColor, 0xFFFFFFFF);
 
