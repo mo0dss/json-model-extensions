@@ -20,6 +20,7 @@
 
 package io.vram.jmx.mixin;
 
+import net.fabricmc.fabric.api.renderer.v1.mesh.QuadEmitter;
 import org.jetbrains.annotations.Nullable;
 import org.joml.Vector3f;
 import org.spongepowered.asm.mixin.Mixin;
@@ -38,7 +39,6 @@ import net.minecraft.core.Direction;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.Mth;
 
-import io.vram.frex.api.buffer.QuadEmitter;
 import io.vram.jmx.json.model.BakedQuadFactoryExt;
 import io.vram.jmx.json.model.BakedQuadFactoryHelper;
 
@@ -83,7 +83,7 @@ public abstract class MixinFaceBakery implements BakedQuadFactoryExt {
 		}
 
 		q.nominalFace(nominalFace);
-		q.vertexColor(-1, -1, -1, -1);
+		q.color(-1, -1, -1, -1);
 		q.lightmap(0, 0, 0, 0);
 
 		q.pos(0, Float.intBitsToFloat(vertexData[0]), Float.intBitsToFloat(vertexData[1]), Float.intBitsToFloat(vertexData[2]));

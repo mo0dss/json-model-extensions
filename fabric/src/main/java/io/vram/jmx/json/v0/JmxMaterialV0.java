@@ -27,11 +27,10 @@ import java.util.Map;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
+import net.fabricmc.fabric.api.renderer.v1.material.BlendMode;
 import org.jetbrains.annotations.Nullable;
 
 import net.minecraft.util.GsonHelper;
-
-import io.vram.frex.api.material.MaterialConstants;
 
 public class JmxMaterialV0 {
 	private static class LayerData {
@@ -51,7 +50,7 @@ public class JmxMaterialV0 {
 			emissive = null;
 			colorIndex = null;
 			color = 0xFFFFFFFF;
-			preset = MaterialConstants.PRESET_DEFAULT;
+			preset = BlendMode.DEFAULT.ordinal();
 		}
 
 		private LayerData(Boolean diffuse, Boolean ao, Boolean emissive, Boolean colorIndex, int color, int preset) {
@@ -167,19 +166,19 @@ public class JmxMaterialV0 {
 
 	private static int asLayer(String property) {
 		if (property == null || property.isEmpty()) {
-			return MaterialConstants.PRESET_DEFAULT;
+			return BlendMode.DEFAULT.ordinal();
 		} else {
 			switch (property.toLowerCase(Locale.ROOT)) {
 				case "solid":
-					return MaterialConstants.PRESET_SOLID;
+					return BlendMode.SOLID.ordinal();
 				case "cutout":
-					return MaterialConstants.PRESET_CUTOUT;
+					return BlendMode.CUTOUT.ordinal();
 				case "cutout_mipped":
-					return MaterialConstants.PRESET_CUTOUT_MIPPED;
+					return BlendMode.CUTOUT_MIPPED.ordinal();
 				case "translucent":
-					return MaterialConstants.PRESET_TRANSLUCENT;
+					return BlendMode.TRANSLUCENT.ordinal();
 				default:
-					return MaterialConstants.PRESET_DEFAULT;
+					return BlendMode.DEFAULT.ordinal();
 			}
 		}
 	}
@@ -248,7 +247,7 @@ public class JmxMaterialV0 {
 	@Nullable
 	public int getLayer(int spriteIndex) {
 		if (layers == null || spriteIndex >= layers.length) {
-			return MaterialConstants.PRESET_DEFAULT;
+			return BlendMode.DEFAULT.ordinal();
 		}
 
 		return layers[spriteIndex].preset;

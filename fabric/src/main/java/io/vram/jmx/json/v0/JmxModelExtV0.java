@@ -28,6 +28,12 @@ import java.util.function.Function;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import it.unimi.dsi.fastutil.objects.Object2ObjectOpenHashMap;
+import net.fabricmc.fabric.api.renderer.v1.RendererAccess;
+import net.fabricmc.fabric.api.renderer.v1.material.BlendMode;
+import net.fabricmc.fabric.api.renderer.v1.material.MaterialFinder;
+import net.fabricmc.fabric.api.renderer.v1.material.RenderMaterial;
+import net.fabricmc.fabric.api.renderer.v1.mesh.QuadEmitter;
+import net.fabricmc.fabric.api.util.TriState;
 import org.jetbrains.annotations.Nullable;
 
 import net.minecraft.client.renderer.block.model.BlockElement;
@@ -44,16 +50,14 @@ import net.minecraft.core.Direction;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.GsonHelper;
 
-import io.vram.frex.api.buffer.QuadEmitter;
-import io.vram.frex.api.material.MaterialFinder;
-import io.vram.frex.api.material.RenderMaterial;
-import io.vram.frex.api.renderer.Renderer;
 import io.vram.jmx.JsonModelExtensions;
 import io.vram.jmx.json.JmxModelExt;
 import io.vram.jmx.json.ext.JmxExtension;
 import io.vram.jmx.json.model.JmxBakedModel;
 
 public class JmxModelExtV0 extends JmxModelExt<JmxModelExtV0> {
+	private static final BlendMode[] BLEND_MODES = BlendMode.values();
+
 	private final Map<String, Object> materialMap;
 	@Nullable
 	private final ResourceLocation quadTransformId;
@@ -176,7 +180,7 @@ public class JmxModelExtV0 extends JmxModelExt<JmxModelExtV0> {
 		final JmxBakedModel.Builder builder = (new JmxBakedModel.Builder(me, modelOverrideList, hasDepth, getQuadTransformId()))
 				.setParticle(particleSprite);
 
-		final MaterialFinder finder = Renderer.get().materials().materialFinder();
+		final MaterialFinder finder = RendererAccess.INSTANCE.getRenderer().materialFinder();
 
 		for (final BlockElement element : me.getElements()) {
 			for (final Direction face : element.faces.keySet()) {
@@ -227,7 +231,7 @@ public class JmxModelExtV0 extends JmxModelExt<JmxModelExtV0> {
 			QUADFACTORY_EXT.jmx_bake(emitter, 0, element, elementFace, texData, sprite, face, bakeProps, modelId);
 
 			final int color = jmxMat.getColor(spriteIndex);
-			emitter.vertexColor(color, color, color, color);
+			emitter.color(color, color, color, color);
 
 			emitter.colorIndex(elementFace.tintIndex);
 
@@ -261,7 +265,7 @@ public class JmxModelExtV0 extends JmxModelExt<JmxModelExtV0> {
 
 		final Boolean ao = jmxMat.getAo(spriteIndex);
 		final boolean disableAo = ao == null ? !usesAo : !ao;
-		finder.disableAo(disableAo);
+		finder.ambientOcclusion(disableAo ? TriState.FALSE : TriState.DEFAULT);
 
 		final Boolean emissive = jmxMat.getEmissive(spriteIndex);
 		finder.emissive(emissive == null ? false : emissive);
@@ -272,7 +276,7 @@ public class JmxModelExtV0 extends JmxModelExt<JmxModelExtV0> {
 			finder.disableColorIndex(true);
 		}
 
-		finder.preset(jmxMat.getLayer(spriteIndex));
+		finder.blendMode(BLEND_MODES[jmxMat.getLayer(spriteIndex) ]);
 
 		return finder.find();
 	}

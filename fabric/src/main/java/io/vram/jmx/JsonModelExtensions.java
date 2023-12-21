@@ -37,7 +37,6 @@ public class JsonModelExtensions implements ClientModInitializer {
 
 	@Override
 	public void onInitializeClient() {
-		// NOOP
 	}
 
 	public static void initializeEndpointsOnce() {

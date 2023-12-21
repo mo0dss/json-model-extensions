@@ -32,6 +32,9 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.JsonPrimitive;
 import it.unimi.dsi.fastutil.objects.Object2ObjectOpenHashMap;
+import net.fabricmc.fabric.api.renderer.v1.RendererAccess;
+import net.fabricmc.fabric.api.renderer.v1.material.RenderMaterial;
+import net.fabricmc.fabric.api.renderer.v1.mesh.QuadEmitter;
 import org.apache.commons.lang3.ObjectUtils;
 import org.jetbrains.annotations.Nullable;
 
@@ -51,9 +54,6 @@ import net.minecraft.core.Direction;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.GsonHelper;
 
-import io.vram.frex.api.buffer.QuadEmitter;
-import io.vram.frex.api.material.MaterialLoader;
-import io.vram.frex.api.material.RenderMaterial;
 import io.vram.jmx.Configurator;
 import io.vram.jmx.JsonModelExtensions;
 import io.vram.jmx.json.JmxModelExt;
@@ -143,7 +143,7 @@ public class JmxModelExtV1 extends JmxModelExt<JmxModelExtV1> {
 		return this.resolve(
 			name,
 			ext -> ext.materialMap,
-			MaterialLoader::getOrLoadMaterial
+			RendererAccess.INSTANCE.getRenderer()::materialById
 		);
 	}
 
@@ -271,7 +271,7 @@ public class JmxModelExtV1 extends JmxModelExt<JmxModelExtV1> {
 					final Optional<Integer> color = resolveColor(layer.color);
 
 					if (color.isPresent()) {
-						emitter.vertexColor(color.get(), color.get(), color.get(), color.get());
+						emitter.color(color.get(), color.get(), color.get(), color.get());
 					} else {
 						HAS_ERROR = true;
 
@@ -338,7 +338,7 @@ public class JmxModelExtV1 extends JmxModelExt<JmxModelExtV1> {
 	}
 
 	private static JmxModelExtV1 deserializeInner(JsonObject obj) {
-		final Map<String, Either<String, ResourceLocation>> materials = deserializeLayers(obj, "materials", el -> new ResourceLocation(el.getAsString()), RenderMaterial.STANDARD_MATERIAL_KEY);
+		final Map<String, Either<String, ResourceLocation>> materials = deserializeLayers(obj, "materials", el -> new ResourceLocation(el.getAsString()), RenderMaterial.MATERIAL_STANDARD);
 		final Map<String, Either<String, Integer>> tags = deserializeLayers(obj, "tags", JsonElement::getAsInt, 0);
 		final Map<String, Either<String, Integer>> colors = deserializeLayers(obj, "colors", JmxModelExtV1::parseColor, 0xFFFFFFFF);
 

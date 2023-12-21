@@ -28,7 +28,7 @@ import net.minecraft.client.resources.model.ModelState;
 import net.minecraft.core.Direction;
 import net.minecraft.resources.ResourceLocation;
 
-import io.vram.frex.api.buffer.QuadEmitter;
+import net.fabricmc.fabric.api.renderer.v1.mesh.QuadEmitter;
 
 public interface BakedQuadFactoryExt {
 	void jmx_bake(QuadEmitter q, int spriteIndex, BlockElement element, BlockElementFace elementFace, BlockFaceUV tex, TextureAtlasSprite sprite, Direction face, ModelState modelBakeSettings, ResourceLocation modelId);
