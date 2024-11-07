@@ -1,0 +1,18 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "io.vram.jmx.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "client": [
+    "MixinBlockElementFace",
+    "MixinBlockElementFaceDeserializer",
+    "MixinBlockModel",
+    "MixinBlockModelDeserializer",
+    "MixinFaceBakery",
+    "MixinModelManager",
+    "MixinSingleFile"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
