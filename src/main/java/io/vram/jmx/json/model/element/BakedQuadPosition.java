@@ -23,10 +23,10 @@ public class BakedQuadPosition {
   }
 
   public static void setY(int[] vertexData, int vertexIndex, float y) {
-    vertexData[vertexIndex + OFFSET_POSITION + 1] = Float.floatToIntBits(y);
+    vertexData[vertexIndex + OFFSET_POSITION + 1] = Float.floatToRawIntBits(y);
   }
 
   public static void setZ(int[] vertexData, int vertexIndex, float z) {
-    vertexData[vertexIndex + OFFSET_POSITION + 2] = Float.floatToIntBits(z);
+    vertexData[vertexIndex + OFFSET_POSITION + 2] = Float.floatToRawIntBits(z);
   }
 }

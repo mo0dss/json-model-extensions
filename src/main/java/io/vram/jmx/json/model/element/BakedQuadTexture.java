@@ -15,10 +15,10 @@ public class BakedQuadTexture {
   }
 
   public static void setU(int[] vertexData, int vertexIndex, float u) {
-    vertexData[vertexIndex + OFFSET_TEXTURE + 0] = Float.floatToIntBits(u);
+    vertexData[vertexIndex + OFFSET_TEXTURE + 0] = Float.floatToRawIntBits(u);
   }
 
   public static void setV(int[] vertexData, int vertexIndex, float v) {
-    vertexData[vertexIndex + OFFSET_TEXTURE + 1] = Float.floatToIntBits(v);
+    vertexData[vertexIndex + OFFSET_TEXTURE + 1] = Float.floatToRawIntBits(v);
   }
 }
