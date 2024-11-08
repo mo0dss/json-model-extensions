@@ -4,23 +4,26 @@ import {Array, Partial, Record, Tuple, String, Dictionary, Boolean, Number, Unio
 export type Vec3 = Static<typeof Vec3>;
 export const Vec3 = Tuple(Number, Number, Number);
 
-export type Transformation = Static<typeof Transformation>;
-export const Transformation = Partial({
+export type GuiLight = Static<typeof GuiLight>;
+export const GuiLight = Union(Literal("front"), Literal("side"));
+
+export type ItemTransform = Static<typeof ItemTransform>;
+export const ItemTransform = Partial({
     rotation: Vec3,
     translation: Vec3,
     scale: Vec3,
 });
 
-export type ModelTransformation = Static<typeof ModelTransformation>;
-export const ModelTransformation = Partial({
-    thirdperson_righthand: Transformation,
-    thirdperson_lefthand: Transformation,
-    firstperson_righthand: Transformation,
-    firstperson_lefthand: Transformation,
-    gui: Transformation,
-    head: Transformation,
-    ground: Transformation,
-    fixed: Transformation,
+export type ItemTransforms = Static<typeof ItemTransforms>;
+export const ItemTransforms = Partial({
+    thirdperson_righthand: ItemTransform,
+    thirdperson_lefthand: ItemTransform,
+    firstperson_righthand: ItemTransform,
+    firstperson_lefthand: ItemTransform,
+    gui: ItemTransform,
+    head: ItemTransform,
+    ground: ItemTransform,
+    fixed: ItemTransform,
 });
 
 export type TextureMap = Static<typeof TextureMap>;
@@ -72,6 +75,7 @@ export function ModelElementOf<A extends Runtype>(Faces: A) {
     }).And(Partial({
         rotation: Rotation,
         shade: Boolean,
+        lightEmission: Number
     }));
 }
 
@@ -81,9 +85,11 @@ export const ModelElement = ModelElementOf(Faces);
 export function ModelOf<A extends Runtype>(ModelElement: A) {
     return Partial({
         parent: String,
-        ambientocclusion: Boolean,
-        display: ModelTransformation,
+        elements: Array(ModelElement),
         textures: TextureMap,
+        ambientocclusion: Boolean,
+        guiLight: GuiLight,
+        itemTransforms: ItemTransforms,
         elements: Array(ModelElement),
     });
 }

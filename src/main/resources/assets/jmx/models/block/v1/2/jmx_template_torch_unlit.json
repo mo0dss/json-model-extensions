@@ -1,0 +1,167 @@
+{
+    "ambientocclusion": false,
+    "textures": {
+        "particle": "#torch"
+    },
+    "elements": [
+        {
+            "from": [
+                7,
+                0,
+                7
+            ],
+            "to": [
+                9,
+                10,
+                9
+            ],
+            "faces": {
+                "down": {
+                    "uv": [
+                        7,
+                        13,
+                        9,
+                        15
+                    ],
+                    "texture": "#torch",
+                    "cullface": "down",
+                    "jmx_layers": [
+                        {
+                            "texture": "#jmx_tex_torch",
+                            "material": "#jmx_mat_torch",
+                            "tag": "#jmx_tag_torch",
+                            "color": "#jmx_color_torch"
+                        },
+                        {
+                            "texture": "#jmx_tex_torch",
+                            "material": "#jmx_mat_torch",
+                            "tag": "#jmx_tag_torch",
+                            "color": "#jmx_color_torch"
+                        }
+                    ]
+                },
+                "up": {
+                    "uv": [
+                        7,
+                        6,
+                        9,
+                        8
+                    ],
+                    "texture": "#torch",
+                    "jmx_layers": [
+                        {
+                            "texture": "#jmx_tex_torch",
+                            "material": "#jmx_mat_torch",
+                            "tag": "#jmx_tag_torch",
+                            "color": "#jmx_color_torch"
+                        },
+                        {
+                            "texture": "#jmx_tex_torch",
+                            "material": "#jmx_mat_torch",
+                            "tag": "#jmx_tag_torch",
+                            "color": "#jmx_color_torch"
+                        }
+                    ]
+                },
+                "north": {
+                    "uv": [
+                        7,
+                        6,
+                        9,
+                        16
+                    ],
+                    "texture": "#torch",
+                    "jmx_layers": [
+                        {
+                            "texture": "#jmx_tex_torch",
+                            "material": "#jmx_mat_torch",
+                            "tag": "#jmx_tag_torch",
+                            "color": "#jmx_color_torch"
+                        },
+                        {
+                            "texture": "#jmx_tex_torch",
+                            "material": "#jmx_mat_torch",
+                            "tag": "#jmx_tag_torch",
+                            "color": "#jmx_color_torch"
+                        }
+                    ]
+                },
+                "east": {
+                    "uv": [
+                        7,
+                        6,
+                        9,
+                        16
+                    ],
+                    "texture": "#torch",
+                    "jmx_layers": [
+                        {
+                            "texture": "#jmx_tex_torch",
+                            "material": "#jmx_mat_torch",
+                            "tag": "#jmx_tag_torch",
+                            "color": "#jmx_color_torch"
+                        },
+                        {
+                            "texture": "#jmx_tex_torch",
+                            "material": "#jmx_mat_torch",
+                            "tag": "#jmx_tag_torch",
+                            "color": "#jmx_color_torch"
+                        }
+                    ]
+                },
+                "south": {
+                    "uv": [
+                        7,
+                        6,
+                        9,
+                        16
+                    ],
+                    "texture": "#torch",
+                    "jmx_layers": [
+                        {
+                            "texture": "#jmx_tex_torch",
+                            "material": "#jmx_mat_torch",
+                            "tag": "#jmx_tag_torch",
+                            "color": "#jmx_color_torch"
+                        },
+                        {
+                            "texture": "#jmx_tex_torch",
+                            "material": "#jmx_mat_torch",
+                            "tag": "#jmx_tag_torch",
+                            "color": "#jmx_color_torch"
+                        }
+                    ]
+                },
+                "west": {
+                    "uv": [
+                        7,
+                        6,
+                        9,
+                        16
+                    ],
+                    "texture": "#torch",
+                    "jmx_layers": [
+                        {
+                            "texture": "#jmx_tex_torch",
+                            "material": "#jmx_mat_torch",
+                            "tag": "#jmx_tag_torch",
+                            "color": "#jmx_color_torch"
+                        },
+                        {
+                            "texture": "#jmx_tex_torch",
+                            "material": "#jmx_mat_torch",
+                            "tag": "#jmx_tag_torch",
+                            "color": "#jmx_color_torch"
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "jmx": {
+        "textures": {
+            "particle": "#jmx_tex_particle"
+        }
+    },
+    "jmx_version": 1
+}

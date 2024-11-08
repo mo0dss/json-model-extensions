@@ -1,0 +1,398 @@
+{
+    "parent": "jmx:block/v1/block",
+    "textures": {
+        "particle": "#side"
+    },
+    "elements": [
+        {
+            "name": "cage",
+            "from": [
+                0,
+                0,
+                0
+            ],
+            "to": [
+                16,
+                16,
+                16
+            ],
+            "faces": {
+                "north": {
+                    "uv": [
+                        0,
+                        0,
+                        16,
+                        16
+                    ],
+                    "texture": "#front",
+                    "cullface": "north",
+                    "jmx_layers": [
+                        {
+                            "texture": "#jmx_tex_front",
+                            "material": "#jmx_mat_front",
+                            "tag": "#jmx_tag_front",
+                            "color": "#jmx_color_front"
+                        },
+                        {
+                            "texture": "#jmx_tex_front",
+                            "material": "#jmx_mat_front",
+                            "tag": "#jmx_tag_front",
+                            "color": "#jmx_color_front"
+                        },
+                        {
+                            "texture": "#jmx_tex_front",
+                            "material": "#jmx_mat_front",
+                            "tag": "#jmx_tag_front",
+                            "color": "#jmx_color_front"
+                        }
+                    ]
+                },
+                "east": {
+                    "uv": [
+                        0,
+                        0,
+                        16,
+                        16
+                    ],
+                    "texture": "#side",
+                    "cullface": "east",
+                    "jmx_layers": [
+                        {
+                            "texture": "#jmx_tex_side",
+                            "material": "#jmx_mat_side",
+                            "tag": "#jmx_tag_side",
+                            "color": "#jmx_color_side"
+                        },
+                        {
+                            "texture": "#jmx_tex_side",
+                            "material": "#jmx_mat_side",
+                            "tag": "#jmx_tag_side",
+                            "color": "#jmx_color_side"
+                        },
+                        {
+                            "texture": "#jmx_tex_side",
+                            "material": "#jmx_mat_side",
+                            "tag": "#jmx_tag_side",
+                            "color": "#jmx_color_side"
+                        }
+                    ]
+                },
+                "south": {
+                    "uv": [
+                        0,
+                        0,
+                        16,
+                        16
+                    ],
+                    "texture": "#side",
+                    "cullface": "south",
+                    "jmx_layers": [
+                        {
+                            "texture": "#jmx_tex_side",
+                            "material": "#jmx_mat_side",
+                            "tag": "#jmx_tag_side",
+                            "color": "#jmx_color_side"
+                        },
+                        {
+                            "texture": "#jmx_tex_side",
+                            "material": "#jmx_mat_side",
+                            "tag": "#jmx_tag_side",
+                            "color": "#jmx_color_side"
+                        },
+                        {
+                            "texture": "#jmx_tex_side",
+                            "material": "#jmx_mat_side",
+                            "tag": "#jmx_tag_side",
+                            "color": "#jmx_color_side"
+                        }
+                    ]
+                },
+                "west": {
+                    "uv": [
+                        0,
+                        0,
+                        16,
+                        16
+                    ],
+                    "texture": "#side",
+                    "cullface": "west",
+                    "jmx_layers": [
+                        {
+                            "texture": "#jmx_tex_side",
+                            "material": "#jmx_mat_side",
+                            "tag": "#jmx_tag_side",
+                            "color": "#jmx_color_side"
+                        },
+                        {
+                            "texture": "#jmx_tex_side",
+                            "material": "#jmx_mat_side",
+                            "tag": "#jmx_tag_side",
+                            "color": "#jmx_color_side"
+                        },
+                        {
+                            "texture": "#jmx_tex_side",
+                            "material": "#jmx_mat_side",
+                            "tag": "#jmx_tag_side",
+                            "color": "#jmx_color_side"
+                        }
+                    ]
+                },
+                "up": {
+                    "uv": [
+                        0,
+                        0,
+                        16,
+                        16
+                    ],
+                    "texture": "#top",
+                    "cullface": "up",
+                    "jmx_layers": [
+                        {
+                            "texture": "#jmx_tex_top",
+                            "material": "#jmx_mat_top",
+                            "tag": "#jmx_tag_top",
+                            "color": "#jmx_color_top"
+                        },
+                        {
+                            "texture": "#jmx_tex_top",
+                            "material": "#jmx_mat_top",
+                            "tag": "#jmx_tag_top",
+                            "color": "#jmx_color_top"
+                        },
+                        {
+                            "texture": "#jmx_tex_top",
+                            "material": "#jmx_mat_top",
+                            "tag": "#jmx_tag_top",
+                            "color": "#jmx_color_top"
+                        }
+                    ]
+                },
+                "down": {
+                    "uv": [
+                        0,
+                        0,
+                        16,
+                        16
+                    ],
+                    "texture": "#bottom",
+                    "cullface": "down",
+                    "jmx_layers": [
+                        {
+                            "texture": "#jmx_tex_bottom",
+                            "material": "#jmx_mat_bottom",
+                            "tag": "#jmx_tag_bottom",
+                            "color": "#jmx_color_bottom"
+                        },
+                        {
+                            "texture": "#jmx_tex_bottom",
+                            "material": "#jmx_mat_bottom",
+                            "tag": "#jmx_tag_bottom",
+                            "color": "#jmx_color_bottom"
+                        },
+                        {
+                            "texture": "#jmx_tex_bottom",
+                            "material": "#jmx_mat_bottom",
+                            "tag": "#jmx_tag_bottom",
+                            "color": "#jmx_color_bottom"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "name": "cage_inverted_faces",
+            "from": [
+                15.998,
+                3.002,
+                0.002
+            ],
+            "to": [
+                0.002,
+                15.998,
+                15.998
+            ],
+            "faces": {
+                "north": {
+                    "uv": [
+                        16,
+                        0,
+                        0,
+                        13
+                    ],
+                    "texture": "#front",
+                    "jmx_layers": [
+                        {
+                            "texture": "#jmx_tex_front",
+                            "material": "#jmx_mat_front",
+                            "tag": "#jmx_tag_front",
+                            "color": "#jmx_color_front"
+                        },
+                        {
+                            "texture": "#jmx_tex_front",
+                            "material": "#jmx_mat_front",
+                            "tag": "#jmx_tag_front",
+                            "color": "#jmx_color_front"
+                        },
+                        {
+                            "texture": "#jmx_tex_front",
+                            "material": "#jmx_mat_front",
+                            "tag": "#jmx_tag_front",
+                            "color": "#jmx_color_front"
+                        }
+                    ]
+                },
+                "east": {
+                    "uv": [
+                        16,
+                        0,
+                        0,
+                        13
+                    ],
+                    "texture": "#side",
+                    "jmx_layers": [
+                        {
+                            "texture": "#jmx_tex_side",
+                            "material": "#jmx_mat_side",
+                            "tag": "#jmx_tag_side",
+                            "color": "#jmx_color_side"
+                        },
+                        {
+                            "texture": "#jmx_tex_side",
+                            "material": "#jmx_mat_side",
+                            "tag": "#jmx_tag_side",
+                            "color": "#jmx_color_side"
+                        },
+                        {
+                            "texture": "#jmx_tex_side",
+                            "material": "#jmx_mat_side",
+                            "tag": "#jmx_tag_side",
+                            "color": "#jmx_color_side"
+                        }
+                    ]
+                },
+                "south": {
+                    "uv": [
+                        16,
+                        0,
+                        0,
+                        13
+                    ],
+                    "texture": "#side",
+                    "jmx_layers": [
+                        {
+                            "texture": "#jmx_tex_side",
+                            "material": "#jmx_mat_side",
+                            "tag": "#jmx_tag_side",
+                            "color": "#jmx_color_side"
+                        },
+                        {
+                            "texture": "#jmx_tex_side",
+                            "material": "#jmx_mat_side",
+                            "tag": "#jmx_tag_side",
+                            "color": "#jmx_color_side"
+                        },
+                        {
+                            "texture": "#jmx_tex_side",
+                            "material": "#jmx_mat_side",
+                            "tag": "#jmx_tag_side",
+                            "color": "#jmx_color_side"
+                        }
+                    ]
+                },
+                "west": {
+                    "uv": [
+                        16,
+                        0,
+                        0,
+                        13
+                    ],
+                    "texture": "#side",
+                    "jmx_layers": [
+                        {
+                            "texture": "#jmx_tex_side",
+                            "material": "#jmx_mat_side",
+                            "tag": "#jmx_tag_side",
+                            "color": "#jmx_color_side"
+                        },
+                        {
+                            "texture": "#jmx_tex_side",
+                            "material": "#jmx_mat_side",
+                            "tag": "#jmx_tag_side",
+                            "color": "#jmx_color_side"
+                        },
+                        {
+                            "texture": "#jmx_tex_side",
+                            "material": "#jmx_mat_side",
+                            "tag": "#jmx_tag_side",
+                            "color": "#jmx_color_side"
+                        }
+                    ]
+                },
+                "up": {
+                    "uv": [
+                        16,
+                        0,
+                        0,
+                        16
+                    ],
+                    "texture": "#top",
+                    "jmx_layers": [
+                        {
+                            "texture": "#jmx_tex_top",
+                            "material": "#jmx_mat_top",
+                            "tag": "#jmx_tag_top",
+                            "color": "#jmx_color_top"
+                        },
+                        {
+                            "texture": "#jmx_tex_top",
+                            "material": "#jmx_mat_top",
+                            "tag": "#jmx_tag_top",
+                            "color": "#jmx_color_top"
+                        },
+                        {
+                            "texture": "#jmx_tex_top",
+                            "material": "#jmx_mat_top",
+                            "tag": "#jmx_tag_top",
+                            "color": "#jmx_color_top"
+                        }
+                    ]
+                },
+                "down": {
+                    "uv": [
+                        0,
+                        0,
+                        16,
+                        16
+                    ],
+                    "texture": "#bottom",
+                    "jmx_layers": [
+                        {
+                            "texture": "#jmx_tex_bottom",
+                            "material": "#jmx_mat_bottom",
+                            "tag": "#jmx_tag_bottom",
+                            "color": "#jmx_color_bottom"
+                        },
+                        {
+                            "texture": "#jmx_tex_bottom",
+                            "material": "#jmx_mat_bottom",
+                            "tag": "#jmx_tag_bottom",
+                            "color": "#jmx_color_bottom"
+                        },
+                        {
+                            "texture": "#jmx_tex_bottom",
+                            "material": "#jmx_mat_bottom",
+                            "tag": "#jmx_tag_bottom",
+                            "color": "#jmx_color_bottom"
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "jmx": {
+        "textures": {
+            "particle": "#jmx_tex_particle"
+        }
+    },
+    "jmx_version": 1
+}

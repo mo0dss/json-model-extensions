@@ -36,7 +36,6 @@
             ]
         }
     },
-    "ambientocclusion": false,
     "textures": {
         "particle": "#wall"
     },

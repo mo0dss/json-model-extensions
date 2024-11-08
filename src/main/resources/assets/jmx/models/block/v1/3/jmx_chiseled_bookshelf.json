@@ -1,0 +1,237 @@
+{
+    "parent": "jmx:block/v1/block",
+    "textures": {
+        "top": "block/chiseled_bookshelf_top",
+        "side": "block/chiseled_bookshelf_side",
+        "particle": "#top"
+    },
+    "elements": [
+        {
+            "name": "chiseled_bookshelf_body",
+            "from": [
+                0,
+                0,
+                0
+            ],
+            "to": [
+                16,
+                16,
+                16
+            ],
+            "faces": {
+                "east": {
+                    "uv": [
+                        0,
+                        0,
+                        16,
+                        16
+                    ],
+                    "texture": "#side",
+                    "cullface": "east",
+                    "jmx_layers": [
+                        {
+                            "texture": "#jmx_tex_side",
+                            "material": "#jmx_mat_side",
+                            "tag": "#jmx_tag_side",
+                            "color": "#jmx_color_side"
+                        },
+                        {
+                            "texture": "#jmx_tex_side",
+                            "material": "#jmx_mat_side",
+                            "tag": "#jmx_tag_side",
+                            "color": "#jmx_color_side"
+                        },
+                        {
+                            "texture": "#jmx_tex_side",
+                            "material": "#jmx_mat_side",
+                            "tag": "#jmx_tag_side",
+                            "color": "#jmx_color_side"
+                        }
+                    ]
+                },
+                "south": {
+                    "uv": [
+                        0,
+                        0,
+                        16,
+                        16
+                    ],
+                    "texture": "#side",
+                    "cullface": "south",
+                    "jmx_layers": [
+                        {
+                            "texture": "#jmx_tex_side",
+                            "material": "#jmx_mat_side",
+                            "tag": "#jmx_tag_side",
+                            "color": "#jmx_color_side"
+                        },
+                        {
+                            "texture": "#jmx_tex_side",
+                            "material": "#jmx_mat_side",
+                            "tag": "#jmx_tag_side",
+                            "color": "#jmx_color_side"
+                        },
+                        {
+                            "texture": "#jmx_tex_side",
+                            "material": "#jmx_mat_side",
+                            "tag": "#jmx_tag_side",
+                            "color": "#jmx_color_side"
+                        }
+                    ]
+                },
+                "west": {
+                    "uv": [
+                        0,
+                        0,
+                        16,
+                        16
+                    ],
+                    "texture": "#side",
+                    "cullface": "west",
+                    "jmx_layers": [
+                        {
+                            "texture": "#jmx_tex_side",
+                            "material": "#jmx_mat_side",
+                            "tag": "#jmx_tag_side",
+                            "color": "#jmx_color_side"
+                        },
+                        {
+                            "texture": "#jmx_tex_side",
+                            "material": "#jmx_mat_side",
+                            "tag": "#jmx_tag_side",
+                            "color": "#jmx_color_side"
+                        },
+                        {
+                            "texture": "#jmx_tex_side",
+                            "material": "#jmx_mat_side",
+                            "tag": "#jmx_tag_side",
+                            "color": "#jmx_color_side"
+                        }
+                    ]
+                },
+                "up": {
+                    "uv": [
+                        0,
+                        0,
+                        16,
+                        16
+                    ],
+                    "texture": "#top",
+                    "cullface": "up",
+                    "jmx_layers": [
+                        {
+                            "texture": "#jmx_tex_top",
+                            "material": "#jmx_mat_top",
+                            "tag": "#jmx_tag_top",
+                            "color": "#jmx_color_top"
+                        },
+                        {
+                            "texture": "#jmx_tex_top",
+                            "material": "#jmx_mat_top",
+                            "tag": "#jmx_tag_top",
+                            "color": "#jmx_color_top"
+                        },
+                        {
+                            "texture": "#jmx_tex_top",
+                            "material": "#jmx_mat_top",
+                            "tag": "#jmx_tag_top",
+                            "color": "#jmx_color_top"
+                        }
+                    ]
+                },
+                "down": {
+                    "uv": [
+                        0,
+                        0,
+                        16,
+                        16
+                    ],
+                    "texture": "#top",
+                    "cullface": "down",
+                    "jmx_layers": [
+                        {
+                            "texture": "#jmx_tex_top",
+                            "material": "#jmx_mat_top",
+                            "tag": "#jmx_tag_top",
+                            "color": "#jmx_color_top"
+                        },
+                        {
+                            "texture": "#jmx_tex_top",
+                            "material": "#jmx_mat_top",
+                            "tag": "#jmx_tag_top",
+                            "color": "#jmx_color_top"
+                        },
+                        {
+                            "texture": "#jmx_tex_top",
+                            "material": "#jmx_mat_top",
+                            "tag": "#jmx_tag_top",
+                            "color": "#jmx_color_top"
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "jmx": {
+        "textures": {
+            "layered_textures": [
+                {
+                    "jmx_tex_top": "#jmx_tex_block/chiseled_bookshelf_top",
+                    "jmx_tex_side": "#jmx_tex_block/chiseled_bookshelf_side"
+                },
+                {
+                    "jmx_tex_top": "#jmx_tex_block/chiseled_bookshelf_top",
+                    "jmx_tex_side": "#jmx_tex_block/chiseled_bookshelf_side"
+                },
+                {
+                    "jmx_tex_top": "#jmx_tex_block/chiseled_bookshelf_top",
+                    "jmx_tex_side": "#jmx_tex_block/chiseled_bookshelf_side"
+                }
+            ],
+            "particle": "#jmx_tex_particle"
+        },
+        "materials": [
+            {
+                "jmx_mat_top": "#jmx_mat_block/chiseled_bookshelf_top",
+                "jmx_mat_side": "#jmx_mat_block/chiseled_bookshelf_side"
+            },
+            {
+                "jmx_mat_top": "#jmx_mat_block/chiseled_bookshelf_top",
+                "jmx_mat_side": "#jmx_mat_block/chiseled_bookshelf_side"
+            },
+            {
+                "jmx_mat_top": "#jmx_mat_block/chiseled_bookshelf_top",
+                "jmx_mat_side": "#jmx_mat_block/chiseled_bookshelf_side"
+            }
+        ],
+        "tags": [
+            {
+                "jmx_tag_top": "#jmx_tag_block/chiseled_bookshelf_top",
+                "jmx_tag_side": "#jmx_tag_block/chiseled_bookshelf_side"
+            },
+            {
+                "jmx_tag_top": "#jmx_tag_block/chiseled_bookshelf_top",
+                "jmx_tag_side": "#jmx_tag_block/chiseled_bookshelf_side"
+            },
+            {
+                "jmx_tag_top": "#jmx_tag_block/chiseled_bookshelf_top",
+                "jmx_tag_side": "#jmx_tag_block/chiseled_bookshelf_side"
+            }
+        ],
+        "colors": [
+            {
+                "jmx_color_top": "#jmx_color_block/chiseled_bookshelf_top",
+                "jmx_color_side": "#jmx_color_block/chiseled_bookshelf_side"
+            },
+            {
+                "jmx_color_top": "#jmx_color_block/chiseled_bookshelf_top",
+                "jmx_color_side": "#jmx_color_block/chiseled_bookshelf_side"
+            },
+            {
+                "jmx_color_top": "#jmx_color_block/chiseled_bookshelf_top",
+                "jmx_color_side": "#jmx_color_block/chiseled_bookshelf_side"
+            }
+        ]
+    },
+    "jmx_version": 1
+}

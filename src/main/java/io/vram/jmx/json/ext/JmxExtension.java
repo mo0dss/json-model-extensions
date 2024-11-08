@@ -21,6 +21,10 @@
 package io.vram.jmx.json.ext;
 
 public interface JmxExtension<T> {
+  static <T> T jmx_ext(JmxExtension<T> object) {
+    return object.jmx_ext();
+  }
+
 	T jmx_ext();
 
 	void jmx_ext(T val);

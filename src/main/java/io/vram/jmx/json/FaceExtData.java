@@ -28,6 +28,8 @@ import com.google.gson.JsonObject;
 
 import com.mojang.datafixers.util.Pair;
 
+import io.vram.jmx.json.ext.JmxExtension;
+import net.minecraft.client.renderer.block.model.BlockElementFace;
 import net.minecraft.client.renderer.block.model.BlockModel;
 import net.minecraft.client.resources.model.Material;
 
@@ -38,6 +40,11 @@ public abstract class FaceExtData {
 	public static FaceExtData empty() {
     return FaceExtDataV1.EMPTY;
 	}
+
+  @SuppressWarnings("unchecked")
+  public static <T extends FaceExtData> T from(BlockElementFace face) {
+    return JmxExtension.jmx_ext(((JmxExtension<T>) (Object) face));
+  }
 
 	public static ThreadLocal<FaceExtData> TRANSFER = new ThreadLocal<>();
 
