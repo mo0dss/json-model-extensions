@@ -20,6 +20,8 @@
 
 package io.vram.jmx.client;
 
+import com.mojang.blaze3d.vertex.DefaultVertexFormat;
+import com.mojang.blaze3d.vertex.VertexFormatElement;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -37,6 +39,7 @@ public class JsonModelExtensions implements ClientModInitializer {
 
 	@Override
 	public void onInitializeClient() {
+
 	}
 
 	public static void initializeEndpointsOnce() {

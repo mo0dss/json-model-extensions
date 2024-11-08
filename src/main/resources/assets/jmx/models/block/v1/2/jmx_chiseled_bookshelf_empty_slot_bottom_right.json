@@ -1,0 +1,43 @@
+{
+    "parent": "jmx:block/v1/2/jmx_template_chiseled_bookshelf_slot_bottom_right",
+    "textures": {
+        "texture": "minecraft:block/chiseled_bookshelf_empty"
+    },
+    "jmx": {
+        "textures": {
+            "layered_textures": [
+                {
+                    "jmx_texture": "#jmx_tex_minecraft:block/chiseled_bookshelf_empty"
+                },
+                {
+                    "jmx_texture": "#jmx_tex_minecraft:block/chiseled_bookshelf_empty"
+                }
+            ]
+        },
+        "materials": [
+            {
+                "jmx_material": "#jmx_mat_minecraft:block/chiseled_bookshelf_empty"
+            },
+            {
+                "jmx_material": "#jmx_mat_minecraft:block/chiseled_bookshelf_empty"
+            }
+        ],
+        "tags": [
+            {
+                "jmx_tag": "#jmx_tag_minecraft:block/chiseled_bookshelf_empty"
+            },
+            {
+                "jmx_tag": "#jmx_tag_minecraft:block/chiseled_bookshelf_empty"
+            }
+        ],
+        "colors": [
+            {
+                "jmx_color": "#jmx_color_minecraft:block/chiseled_bookshelf_empty"
+            },
+            {
+                "jmx_color": "#jmx_color_minecraft:block/chiseled_bookshelf_empty"
+            }
+        ]
+    },
+    "jmx_version": 1
+}

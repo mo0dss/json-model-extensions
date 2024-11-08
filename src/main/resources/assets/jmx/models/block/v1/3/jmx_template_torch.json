@@ -25,6 +25,7 @@
                         15
                     ],
                     "texture": "#torch",
+                    "cullface": "down",
                     "jmx_layers": [
                         {
                             "texture": "#jmx_tex_torch",
@@ -74,27 +75,12 @@
                             "color": "#jmx_color_torch"
                         }
                     ]
-                }
-            }
-        },
-        {
-            "from": [
-                7,
-                0,
-                0
-            ],
-            "to": [
-                9,
-                16,
-                16
-            ],
-            "shade": false,
-            "faces": {
-                "west": {
+                },
+                "north": {
                     "uv": [
-                        0,
-                        0,
-                        16,
+                        7,
+                        6,
+                        9,
                         16
                     ],
                     "texture": "#torch",
@@ -121,53 +107,9 @@
                 },
                 "east": {
                     "uv": [
-                        0,
-                        0,
-                        16,
-                        16
-                    ],
-                    "texture": "#torch",
-                    "jmx_layers": [
-                        {
-                            "texture": "#jmx_tex_torch",
-                            "material": "#jmx_mat_torch",
-                            "tag": "#jmx_tag_torch",
-                            "color": "#jmx_color_torch"
-                        },
-                        {
-                            "texture": "#jmx_tex_torch",
-                            "material": "#jmx_mat_torch",
-                            "tag": "#jmx_tag_torch",
-                            "color": "#jmx_color_torch"
-                        },
-                        {
-                            "texture": "#jmx_tex_torch",
-                            "material": "#jmx_mat_torch",
-                            "tag": "#jmx_tag_torch",
-                            "color": "#jmx_color_torch"
-                        }
-                    ]
-                }
-            }
-        },
-        {
-            "from": [
-                0,
-                0,
-                7
-            ],
-            "to": [
-                16,
-                16,
-                9
-            ],
-            "shade": false,
-            "faces": {
-                "north": {
-                    "uv": [
-                        0,
-                        0,
-                        16,
+                        7,
+                        6,
+                        9,
                         16
                     ],
                     "texture": "#torch",
@@ -194,9 +136,38 @@
                 },
                 "south": {
                     "uv": [
-                        0,
-                        0,
-                        16,
+                        7,
+                        6,
+                        9,
+                        16
+                    ],
+                    "texture": "#torch",
+                    "jmx_layers": [
+                        {
+                            "texture": "#jmx_tex_torch",
+                            "material": "#jmx_mat_torch",
+                            "tag": "#jmx_tag_torch",
+                            "color": "#jmx_color_torch"
+                        },
+                        {
+                            "texture": "#jmx_tex_torch",
+                            "material": "#jmx_mat_torch",
+                            "tag": "#jmx_tag_torch",
+                            "color": "#jmx_color_torch"
+                        },
+                        {
+                            "texture": "#jmx_tex_torch",
+                            "material": "#jmx_mat_torch",
+                            "tag": "#jmx_tag_torch",
+                            "color": "#jmx_color_torch"
+                        }
+                    ]
+                },
+                "west": {
+                    "uv": [
+                        7,
+                        6,
+                        9,
                         16
                     ],
                     "texture": "#torch",

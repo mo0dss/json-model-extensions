@@ -1,0 +1,100 @@
+{
+    "textures": {
+        "texture": "#texture"
+    },
+    "elements": [
+        {
+            "from": [
+                0,
+                8,
+                0
+            ],
+            "to": [
+                5,
+                16,
+                0
+            ],
+            "faces": {
+                "north": {
+                    "uv": [
+                        11,
+                        0,
+                        16,
+                        8
+                    ],
+                    "texture": "#texture",
+                    "cullface": "north",
+                    "jmx_layers": [
+                        {
+                            "texture": "#jmx_texture",
+                            "material": "#jmx_material",
+                            "tag": "#jmx_tag",
+                            "color": "#jmx_color"
+                        },
+                        {
+                            "texture": "#jmx_texture",
+                            "material": "#jmx_material",
+                            "tag": "#jmx_tag",
+                            "color": "#jmx_color"
+                        },
+                        {
+                            "texture": "#jmx_texture",
+                            "material": "#jmx_material",
+                            "tag": "#jmx_tag",
+                            "color": "#jmx_color"
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "jmx": {
+        "textures": {
+            "layered_textures": [
+                {
+                    "jmx_texture": "#jmx_texture"
+                },
+                {
+                    "jmx_texture": "#jmx_texture"
+                },
+                {
+                    "jmx_texture": "#jmx_texture"
+                }
+            ]
+        },
+        "materials": [
+            {
+                "jmx_material": "#jmx_material"
+            },
+            {
+                "jmx_material": "#jmx_material"
+            },
+            {
+                "jmx_material": "#jmx_material"
+            }
+        ],
+        "tags": [
+            {
+                "jmx_tag": "#jmx_tag"
+            },
+            {
+                "jmx_tag": "#jmx_tag"
+            },
+            {
+                "jmx_tag": "#jmx_tag"
+            }
+        ],
+        "colors": [
+            {
+                "jmx_color": "#jmx_color"
+            },
+            {
+                "jmx_color": "#jmx_color"
+            },
+            {
+                "jmx_color": "#jmx_color"
+            }
+        ]
+    },
+    "jmx_version": 1
+}

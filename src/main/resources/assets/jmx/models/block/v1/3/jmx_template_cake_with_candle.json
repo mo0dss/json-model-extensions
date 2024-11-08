@@ -1,0 +1,588 @@
+{
+    "textures": {
+        "particle": "block/cake_side",
+        "bottom": "block/cake_bottom",
+        "top": "block/cake_top",
+        "side": "block/cake_side"
+    },
+    "elements": [
+        {
+            "from": [
+                1,
+                0,
+                1
+            ],
+            "to": [
+                15,
+                8,
+                15
+            ],
+            "faces": {
+                "down": {
+                    "texture": "#bottom",
+                    "cullface": "down",
+                    "jmx_layers": [
+                        {
+                            "texture": "#jmx_tex_bottom",
+                            "material": "#jmx_mat_bottom",
+                            "tag": "#jmx_tag_bottom",
+                            "color": "#jmx_color_bottom"
+                        },
+                        {
+                            "texture": "#jmx_tex_bottom",
+                            "material": "#jmx_mat_bottom",
+                            "tag": "#jmx_tag_bottom",
+                            "color": "#jmx_color_bottom"
+                        },
+                        {
+                            "texture": "#jmx_tex_bottom",
+                            "material": "#jmx_mat_bottom",
+                            "tag": "#jmx_tag_bottom",
+                            "color": "#jmx_color_bottom"
+                        }
+                    ]
+                },
+                "up": {
+                    "texture": "#top",
+                    "jmx_layers": [
+                        {
+                            "texture": "#jmx_tex_top",
+                            "material": "#jmx_mat_top",
+                            "tag": "#jmx_tag_top",
+                            "color": "#jmx_color_top"
+                        },
+                        {
+                            "texture": "#jmx_tex_top",
+                            "material": "#jmx_mat_top",
+                            "tag": "#jmx_tag_top",
+                            "color": "#jmx_color_top"
+                        },
+                        {
+                            "texture": "#jmx_tex_top",
+                            "material": "#jmx_mat_top",
+                            "tag": "#jmx_tag_top",
+                            "color": "#jmx_color_top"
+                        }
+                    ]
+                },
+                "north": {
+                    "texture": "#side",
+                    "jmx_layers": [
+                        {
+                            "texture": "#jmx_tex_side",
+                            "material": "#jmx_mat_side",
+                            "tag": "#jmx_tag_side",
+                            "color": "#jmx_color_side"
+                        },
+                        {
+                            "texture": "#jmx_tex_side",
+                            "material": "#jmx_mat_side",
+                            "tag": "#jmx_tag_side",
+                            "color": "#jmx_color_side"
+                        },
+                        {
+                            "texture": "#jmx_tex_side",
+                            "material": "#jmx_mat_side",
+                            "tag": "#jmx_tag_side",
+                            "color": "#jmx_color_side"
+                        }
+                    ]
+                },
+                "south": {
+                    "texture": "#side",
+                    "jmx_layers": [
+                        {
+                            "texture": "#jmx_tex_side",
+                            "material": "#jmx_mat_side",
+                            "tag": "#jmx_tag_side",
+                            "color": "#jmx_color_side"
+                        },
+                        {
+                            "texture": "#jmx_tex_side",
+                            "material": "#jmx_mat_side",
+                            "tag": "#jmx_tag_side",
+                            "color": "#jmx_color_side"
+                        },
+                        {
+                            "texture": "#jmx_tex_side",
+                            "material": "#jmx_mat_side",
+                            "tag": "#jmx_tag_side",
+                            "color": "#jmx_color_side"
+                        }
+                    ]
+                },
+                "west": {
+                    "texture": "#side",
+                    "jmx_layers": [
+                        {
+                            "texture": "#jmx_tex_side",
+                            "material": "#jmx_mat_side",
+                            "tag": "#jmx_tag_side",
+                            "color": "#jmx_color_side"
+                        },
+                        {
+                            "texture": "#jmx_tex_side",
+                            "material": "#jmx_mat_side",
+                            "tag": "#jmx_tag_side",
+                            "color": "#jmx_color_side"
+                        },
+                        {
+                            "texture": "#jmx_tex_side",
+                            "material": "#jmx_mat_side",
+                            "tag": "#jmx_tag_side",
+                            "color": "#jmx_color_side"
+                        }
+                    ]
+                },
+                "east": {
+                    "texture": "#side",
+                    "jmx_layers": [
+                        {
+                            "texture": "#jmx_tex_side",
+                            "material": "#jmx_mat_side",
+                            "tag": "#jmx_tag_side",
+                            "color": "#jmx_color_side"
+                        },
+                        {
+                            "texture": "#jmx_tex_side",
+                            "material": "#jmx_mat_side",
+                            "tag": "#jmx_tag_side",
+                            "color": "#jmx_color_side"
+                        },
+                        {
+                            "texture": "#jmx_tex_side",
+                            "material": "#jmx_mat_side",
+                            "tag": "#jmx_tag_side",
+                            "color": "#jmx_color_side"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "from": [
+                7,
+                8,
+                7
+            ],
+            "to": [
+                9,
+                14,
+                9
+            ],
+            "faces": {
+                "north": {
+                    "uv": [
+                        0,
+                        8,
+                        2,
+                        14
+                    ],
+                    "texture": "#candle",
+                    "jmx_layers": [
+                        {
+                            "texture": "#jmx_tex_candle",
+                            "material": "#jmx_mat_candle",
+                            "tag": "#jmx_tag_candle",
+                            "color": "#jmx_color_candle"
+                        },
+                        {
+                            "texture": "#jmx_tex_candle",
+                            "material": "#jmx_mat_candle",
+                            "tag": "#jmx_tag_candle",
+                            "color": "#jmx_color_candle"
+                        },
+                        {
+                            "texture": "#jmx_tex_candle",
+                            "material": "#jmx_mat_candle",
+                            "tag": "#jmx_tag_candle",
+                            "color": "#jmx_color_candle"
+                        }
+                    ]
+                },
+                "east": {
+                    "uv": [
+                        0,
+                        8,
+                        2,
+                        14
+                    ],
+                    "texture": "#candle",
+                    "jmx_layers": [
+                        {
+                            "texture": "#jmx_tex_candle",
+                            "material": "#jmx_mat_candle",
+                            "tag": "#jmx_tag_candle",
+                            "color": "#jmx_color_candle"
+                        },
+                        {
+                            "texture": "#jmx_tex_candle",
+                            "material": "#jmx_mat_candle",
+                            "tag": "#jmx_tag_candle",
+                            "color": "#jmx_color_candle"
+                        },
+                        {
+                            "texture": "#jmx_tex_candle",
+                            "material": "#jmx_mat_candle",
+                            "tag": "#jmx_tag_candle",
+                            "color": "#jmx_color_candle"
+                        }
+                    ]
+                },
+                "south": {
+                    "uv": [
+                        0,
+                        8,
+                        2,
+                        14
+                    ],
+                    "texture": "#candle",
+                    "jmx_layers": [
+                        {
+                            "texture": "#jmx_tex_candle",
+                            "material": "#jmx_mat_candle",
+                            "tag": "#jmx_tag_candle",
+                            "color": "#jmx_color_candle"
+                        },
+                        {
+                            "texture": "#jmx_tex_candle",
+                            "material": "#jmx_mat_candle",
+                            "tag": "#jmx_tag_candle",
+                            "color": "#jmx_color_candle"
+                        },
+                        {
+                            "texture": "#jmx_tex_candle",
+                            "material": "#jmx_mat_candle",
+                            "tag": "#jmx_tag_candle",
+                            "color": "#jmx_color_candle"
+                        }
+                    ]
+                },
+                "west": {
+                    "uv": [
+                        0,
+                        8,
+                        2,
+                        14
+                    ],
+                    "texture": "#candle",
+                    "jmx_layers": [
+                        {
+                            "texture": "#jmx_tex_candle",
+                            "material": "#jmx_mat_candle",
+                            "tag": "#jmx_tag_candle",
+                            "color": "#jmx_color_candle"
+                        },
+                        {
+                            "texture": "#jmx_tex_candle",
+                            "material": "#jmx_mat_candle",
+                            "tag": "#jmx_tag_candle",
+                            "color": "#jmx_color_candle"
+                        },
+                        {
+                            "texture": "#jmx_tex_candle",
+                            "material": "#jmx_mat_candle",
+                            "tag": "#jmx_tag_candle",
+                            "color": "#jmx_color_candle"
+                        }
+                    ]
+                },
+                "up": {
+                    "uv": [
+                        0,
+                        6,
+                        2,
+                        8
+                    ],
+                    "texture": "#candle",
+                    "jmx_layers": [
+                        {
+                            "texture": "#jmx_tex_candle",
+                            "material": "#jmx_mat_candle",
+                            "tag": "#jmx_tag_candle",
+                            "color": "#jmx_color_candle"
+                        },
+                        {
+                            "texture": "#jmx_tex_candle",
+                            "material": "#jmx_mat_candle",
+                            "tag": "#jmx_tag_candle",
+                            "color": "#jmx_color_candle"
+                        },
+                        {
+                            "texture": "#jmx_tex_candle",
+                            "material": "#jmx_mat_candle",
+                            "tag": "#jmx_tag_candle",
+                            "color": "#jmx_color_candle"
+                        }
+                    ]
+                },
+                "down": {
+                    "uv": [
+                        0,
+                        14,
+                        2,
+                        16
+                    ],
+                    "texture": "#candle",
+                    "cullface": "down",
+                    "jmx_layers": [
+                        {
+                            "texture": "#jmx_tex_candle",
+                            "material": "#jmx_mat_candle",
+                            "tag": "#jmx_tag_candle",
+                            "color": "#jmx_color_candle"
+                        },
+                        {
+                            "texture": "#jmx_tex_candle",
+                            "material": "#jmx_mat_candle",
+                            "tag": "#jmx_tag_candle",
+                            "color": "#jmx_color_candle"
+                        },
+                        {
+                            "texture": "#jmx_tex_candle",
+                            "material": "#jmx_mat_candle",
+                            "tag": "#jmx_tag_candle",
+                            "color": "#jmx_color_candle"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "from": [
+                7.5,
+                14,
+                8
+            ],
+            "to": [
+                8.5,
+                15,
+                8
+            ],
+            "rotation": {
+                "angle": -45,
+                "axis": "y",
+                "origin": [
+                    8,
+                    14,
+                    8
+                ]
+            },
+            "faces": {
+                "north": {
+                    "uv": [
+                        0,
+                        5,
+                        1,
+                        6
+                    ],
+                    "texture": "#candle",
+                    "jmx_layers": [
+                        {
+                            "texture": "#jmx_tex_candle",
+                            "material": "#jmx_mat_candle",
+                            "tag": "#jmx_tag_candle",
+                            "color": "#jmx_color_candle"
+                        },
+                        {
+                            "texture": "#jmx_tex_candle",
+                            "material": "#jmx_mat_candle",
+                            "tag": "#jmx_tag_candle",
+                            "color": "#jmx_color_candle"
+                        },
+                        {
+                            "texture": "#jmx_tex_candle",
+                            "material": "#jmx_mat_candle",
+                            "tag": "#jmx_tag_candle",
+                            "color": "#jmx_color_candle"
+                        }
+                    ]
+                },
+                "south": {
+                    "uv": [
+                        0,
+                        5,
+                        1,
+                        6
+                    ],
+                    "texture": "#candle",
+                    "jmx_layers": [
+                        {
+                            "texture": "#jmx_tex_candle",
+                            "material": "#jmx_mat_candle",
+                            "tag": "#jmx_tag_candle",
+                            "color": "#jmx_color_candle"
+                        },
+                        {
+                            "texture": "#jmx_tex_candle",
+                            "material": "#jmx_mat_candle",
+                            "tag": "#jmx_tag_candle",
+                            "color": "#jmx_color_candle"
+                        },
+                        {
+                            "texture": "#jmx_tex_candle",
+                            "material": "#jmx_mat_candle",
+                            "tag": "#jmx_tag_candle",
+                            "color": "#jmx_color_candle"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "from": [
+                7.5,
+                14,
+                8
+            ],
+            "to": [
+                8.5,
+                15,
+                8
+            ],
+            "rotation": {
+                "angle": 45,
+                "axis": "y",
+                "origin": [
+                    8,
+                    14,
+                    8
+                ]
+            },
+            "faces": {
+                "north": {
+                    "uv": [
+                        0,
+                        5,
+                        1,
+                        6
+                    ],
+                    "texture": "#candle",
+                    "jmx_layers": [
+                        {
+                            "texture": "#jmx_tex_candle",
+                            "material": "#jmx_mat_candle",
+                            "tag": "#jmx_tag_candle",
+                            "color": "#jmx_color_candle"
+                        },
+                        {
+                            "texture": "#jmx_tex_candle",
+                            "material": "#jmx_mat_candle",
+                            "tag": "#jmx_tag_candle",
+                            "color": "#jmx_color_candle"
+                        },
+                        {
+                            "texture": "#jmx_tex_candle",
+                            "material": "#jmx_mat_candle",
+                            "tag": "#jmx_tag_candle",
+                            "color": "#jmx_color_candle"
+                        }
+                    ]
+                },
+                "south": {
+                    "uv": [
+                        0,
+                        5,
+                        1,
+                        6
+                    ],
+                    "texture": "#candle",
+                    "jmx_layers": [
+                        {
+                            "texture": "#jmx_tex_candle",
+                            "material": "#jmx_mat_candle",
+                            "tag": "#jmx_tag_candle",
+                            "color": "#jmx_color_candle"
+                        },
+                        {
+                            "texture": "#jmx_tex_candle",
+                            "material": "#jmx_mat_candle",
+                            "tag": "#jmx_tag_candle",
+                            "color": "#jmx_color_candle"
+                        },
+                        {
+                            "texture": "#jmx_tex_candle",
+                            "material": "#jmx_mat_candle",
+                            "tag": "#jmx_tag_candle",
+                            "color": "#jmx_color_candle"
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "jmx": {
+        "textures": {
+            "layered_textures": [
+                {
+                    "jmx_tex_bottom": "#jmx_tex_block/cake_bottom",
+                    "jmx_tex_top": "#jmx_tex_block/cake_top",
+                    "jmx_tex_side": "#jmx_tex_block/cake_side"
+                },
+                {
+                    "jmx_tex_bottom": "#jmx_tex_block/cake_bottom",
+                    "jmx_tex_top": "#jmx_tex_block/cake_top",
+                    "jmx_tex_side": "#jmx_tex_block/cake_side"
+                },
+                {
+                    "jmx_tex_bottom": "#jmx_tex_block/cake_bottom",
+                    "jmx_tex_top": "#jmx_tex_block/cake_top",
+                    "jmx_tex_side": "#jmx_tex_block/cake_side"
+                }
+            ],
+            "particle": "#jmx_tex_particle"
+        },
+        "materials": [
+            {
+                "jmx_mat_bottom": "#jmx_mat_block/cake_bottom",
+                "jmx_mat_top": "#jmx_mat_block/cake_top",
+                "jmx_mat_side": "#jmx_mat_block/cake_side"
+            },
+            {
+                "jmx_mat_bottom": "#jmx_mat_block/cake_bottom",
+                "jmx_mat_top": "#jmx_mat_block/cake_top",
+                "jmx_mat_side": "#jmx_mat_block/cake_side"
+            },
+            {
+                "jmx_mat_bottom": "#jmx_mat_block/cake_bottom",
+                "jmx_mat_top": "#jmx_mat_block/cake_top",
+                "jmx_mat_side": "#jmx_mat_block/cake_side"
+            }
+        ],
+        "tags": [
+            {
+                "jmx_tag_bottom": "#jmx_tag_block/cake_bottom",
+                "jmx_tag_top": "#jmx_tag_block/cake_top",
+                "jmx_tag_side": "#jmx_tag_block/cake_side"
+            },
+            {
+                "jmx_tag_bottom": "#jmx_tag_block/cake_bottom",
+                "jmx_tag_top": "#jmx_tag_block/cake_top",
+                "jmx_tag_side": "#jmx_tag_block/cake_side"
+            },
+            {
+                "jmx_tag_bottom": "#jmx_tag_block/cake_bottom",
+                "jmx_tag_top": "#jmx_tag_block/cake_top",
+                "jmx_tag_side": "#jmx_tag_block/cake_side"
+            }
+        ],
+        "colors": [
+            {
+                "jmx_color_bottom": "#jmx_color_block/cake_bottom",
+                "jmx_color_top": "#jmx_color_block/cake_top",
+                "jmx_color_side": "#jmx_color_block/cake_side"
+            },
+            {
+                "jmx_color_bottom": "#jmx_color_block/cake_bottom",
+                "jmx_color_top": "#jmx_color_block/cake_top",
+                "jmx_color_side": "#jmx_color_block/cake_side"
+            },
+            {
+                "jmx_color_bottom": "#jmx_color_block/cake_bottom",
+                "jmx_color_top": "#jmx_color_block/cake_top",
+                "jmx_color_side": "#jmx_color_block/cake_side"
+            }
+        ]
+    },
+    "jmx_version": 1
+}

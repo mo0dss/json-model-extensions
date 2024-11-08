@@ -1,0 +1,672 @@
+{
+    "parent": "jmx:block/v1/block",
+    "textures": {
+        "bottom": "block/sculk_shrieker_bottom",
+        "side": "block/sculk_shrieker_side",
+        "top": "block/sculk_shrieker_top",
+        "inner_top": "block/sculk_shrieker_inner_top",
+        "particle": "block/sculk_shrieker_bottom"
+    },
+    "elements": [
+        {
+            "name": "bottom_slab",
+            "from": [
+                0,
+                0,
+                0
+            ],
+            "to": [
+                16,
+                8,
+                16
+            ],
+            "faces": {
+                "north": {
+                    "uv": [
+                        0,
+                        8,
+                        16,
+                        16
+                    ],
+                    "texture": "#side",
+                    "cullface": "north",
+                    "jmx_layers": [
+                        {
+                            "texture": "#jmx_tex_side",
+                            "material": "#jmx_mat_side",
+                            "tag": "#jmx_tag_side",
+                            "color": "#jmx_color_side"
+                        },
+                        {
+                            "texture": "#jmx_tex_side",
+                            "material": "#jmx_mat_side",
+                            "tag": "#jmx_tag_side",
+                            "color": "#jmx_color_side"
+                        },
+                        {
+                            "texture": "#jmx_tex_side",
+                            "material": "#jmx_mat_side",
+                            "tag": "#jmx_tag_side",
+                            "color": "#jmx_color_side"
+                        }
+                    ]
+                },
+                "east": {
+                    "uv": [
+                        0,
+                        8,
+                        16,
+                        16
+                    ],
+                    "texture": "#side",
+                    "cullface": "east",
+                    "jmx_layers": [
+                        {
+                            "texture": "#jmx_tex_side",
+                            "material": "#jmx_mat_side",
+                            "tag": "#jmx_tag_side",
+                            "color": "#jmx_color_side"
+                        },
+                        {
+                            "texture": "#jmx_tex_side",
+                            "material": "#jmx_mat_side",
+                            "tag": "#jmx_tag_side",
+                            "color": "#jmx_color_side"
+                        },
+                        {
+                            "texture": "#jmx_tex_side",
+                            "material": "#jmx_mat_side",
+                            "tag": "#jmx_tag_side",
+                            "color": "#jmx_color_side"
+                        }
+                    ]
+                },
+                "south": {
+                    "uv": [
+                        0,
+                        8,
+                        16,
+                        16
+                    ],
+                    "texture": "#side",
+                    "cullface": "south",
+                    "jmx_layers": [
+                        {
+                            "texture": "#jmx_tex_side",
+                            "material": "#jmx_mat_side",
+                            "tag": "#jmx_tag_side",
+                            "color": "#jmx_color_side"
+                        },
+                        {
+                            "texture": "#jmx_tex_side",
+                            "material": "#jmx_mat_side",
+                            "tag": "#jmx_tag_side",
+                            "color": "#jmx_color_side"
+                        },
+                        {
+                            "texture": "#jmx_tex_side",
+                            "material": "#jmx_mat_side",
+                            "tag": "#jmx_tag_side",
+                            "color": "#jmx_color_side"
+                        }
+                    ]
+                },
+                "west": {
+                    "uv": [
+                        0,
+                        8,
+                        16,
+                        16
+                    ],
+                    "texture": "#side",
+                    "cullface": "west",
+                    "jmx_layers": [
+                        {
+                            "texture": "#jmx_tex_side",
+                            "material": "#jmx_mat_side",
+                            "tag": "#jmx_tag_side",
+                            "color": "#jmx_color_side"
+                        },
+                        {
+                            "texture": "#jmx_tex_side",
+                            "material": "#jmx_mat_side",
+                            "tag": "#jmx_tag_side",
+                            "color": "#jmx_color_side"
+                        },
+                        {
+                            "texture": "#jmx_tex_side",
+                            "material": "#jmx_mat_side",
+                            "tag": "#jmx_tag_side",
+                            "color": "#jmx_color_side"
+                        }
+                    ]
+                },
+                "up": {
+                    "uv": [
+                        0,
+                        0,
+                        16,
+                        16
+                    ],
+                    "texture": "#inner_top",
+                    "jmx_layers": [
+                        {
+                            "texture": "#jmx_tex_inner_top",
+                            "material": "#jmx_mat_inner_top",
+                            "tag": "#jmx_tag_inner_top",
+                            "color": "#jmx_color_inner_top"
+                        },
+                        {
+                            "texture": "#jmx_tex_inner_top",
+                            "material": "#jmx_mat_inner_top",
+                            "tag": "#jmx_tag_inner_top",
+                            "color": "#jmx_color_inner_top"
+                        },
+                        {
+                            "texture": "#jmx_tex_inner_top",
+                            "material": "#jmx_mat_inner_top",
+                            "tag": "#jmx_tag_inner_top",
+                            "color": "#jmx_color_inner_top"
+                        }
+                    ]
+                },
+                "down": {
+                    "uv": [
+                        0,
+                        0,
+                        16,
+                        16
+                    ],
+                    "texture": "#bottom",
+                    "cullface": "down",
+                    "jmx_layers": [
+                        {
+                            "texture": "#jmx_tex_bottom",
+                            "material": "#jmx_mat_bottom",
+                            "tag": "#jmx_tag_bottom",
+                            "color": "#jmx_color_bottom"
+                        },
+                        {
+                            "texture": "#jmx_tex_bottom",
+                            "material": "#jmx_mat_bottom",
+                            "tag": "#jmx_tag_bottom",
+                            "color": "#jmx_color_bottom"
+                        },
+                        {
+                            "texture": "#jmx_tex_bottom",
+                            "material": "#jmx_mat_bottom",
+                            "tag": "#jmx_tag_bottom",
+                            "color": "#jmx_color_bottom"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "name": "top_slab",
+            "from": [
+                1,
+                8,
+                1
+            ],
+            "to": [
+                15,
+                15,
+                15
+            ],
+            "faces": {
+                "north": {
+                    "uv": [
+                        1,
+                        1,
+                        15,
+                        8
+                    ],
+                    "texture": "#side",
+                    "jmx_layers": [
+                        {
+                            "texture": "#jmx_tex_side",
+                            "material": "#jmx_mat_side",
+                            "tag": "#jmx_tag_side",
+                            "color": "#jmx_color_side"
+                        },
+                        {
+                            "texture": "#jmx_tex_side",
+                            "material": "#jmx_mat_side",
+                            "tag": "#jmx_tag_side",
+                            "color": "#jmx_color_side"
+                        },
+                        {
+                            "texture": "#jmx_tex_side",
+                            "material": "#jmx_mat_side",
+                            "tag": "#jmx_tag_side",
+                            "color": "#jmx_color_side"
+                        }
+                    ]
+                },
+                "east": {
+                    "uv": [
+                        1,
+                        1,
+                        15,
+                        8
+                    ],
+                    "texture": "#side",
+                    "jmx_layers": [
+                        {
+                            "texture": "#jmx_tex_side",
+                            "material": "#jmx_mat_side",
+                            "tag": "#jmx_tag_side",
+                            "color": "#jmx_color_side"
+                        },
+                        {
+                            "texture": "#jmx_tex_side",
+                            "material": "#jmx_mat_side",
+                            "tag": "#jmx_tag_side",
+                            "color": "#jmx_color_side"
+                        },
+                        {
+                            "texture": "#jmx_tex_side",
+                            "material": "#jmx_mat_side",
+                            "tag": "#jmx_tag_side",
+                            "color": "#jmx_color_side"
+                        }
+                    ]
+                },
+                "south": {
+                    "uv": [
+                        1,
+                        1,
+                        15,
+                        8
+                    ],
+                    "texture": "#side",
+                    "jmx_layers": [
+                        {
+                            "texture": "#jmx_tex_side",
+                            "material": "#jmx_mat_side",
+                            "tag": "#jmx_tag_side",
+                            "color": "#jmx_color_side"
+                        },
+                        {
+                            "texture": "#jmx_tex_side",
+                            "material": "#jmx_mat_side",
+                            "tag": "#jmx_tag_side",
+                            "color": "#jmx_color_side"
+                        },
+                        {
+                            "texture": "#jmx_tex_side",
+                            "material": "#jmx_mat_side",
+                            "tag": "#jmx_tag_side",
+                            "color": "#jmx_color_side"
+                        }
+                    ]
+                },
+                "west": {
+                    "uv": [
+                        1,
+                        1,
+                        15,
+                        8
+                    ],
+                    "texture": "#side",
+                    "jmx_layers": [
+                        {
+                            "texture": "#jmx_tex_side",
+                            "material": "#jmx_mat_side",
+                            "tag": "#jmx_tag_side",
+                            "color": "#jmx_color_side"
+                        },
+                        {
+                            "texture": "#jmx_tex_side",
+                            "material": "#jmx_mat_side",
+                            "tag": "#jmx_tag_side",
+                            "color": "#jmx_color_side"
+                        },
+                        {
+                            "texture": "#jmx_tex_side",
+                            "material": "#jmx_mat_side",
+                            "tag": "#jmx_tag_side",
+                            "color": "#jmx_color_side"
+                        }
+                    ]
+                },
+                "up": {
+                    "uv": [
+                        1,
+                        1,
+                        15,
+                        15
+                    ],
+                    "texture": "#top",
+                    "jmx_layers": [
+                        {
+                            "texture": "#jmx_tex_top",
+                            "material": "#jmx_mat_top",
+                            "tag": "#jmx_tag_top",
+                            "color": "#jmx_color_top"
+                        },
+                        {
+                            "texture": "#jmx_tex_top",
+                            "material": "#jmx_mat_top",
+                            "tag": "#jmx_tag_top",
+                            "color": "#jmx_color_top"
+                        },
+                        {
+                            "texture": "#jmx_tex_top",
+                            "material": "#jmx_mat_top",
+                            "tag": "#jmx_tag_top",
+                            "color": "#jmx_color_top"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "name": "up",
+            "from": [
+                1,
+                14.98,
+                1
+            ],
+            "to": [
+                15,
+                14.98,
+                15
+            ],
+            "faces": {
+                "down": {
+                    "uv": [
+                        1,
+                        1,
+                        15,
+                        15
+                    ],
+                    "texture": "#top",
+                    "jmx_layers": [
+                        {
+                            "texture": "#jmx_tex_top",
+                            "material": "#jmx_mat_top",
+                            "tag": "#jmx_tag_top",
+                            "color": "#jmx_color_top"
+                        },
+                        {
+                            "texture": "#jmx_tex_top",
+                            "material": "#jmx_mat_top",
+                            "tag": "#jmx_tag_top",
+                            "color": "#jmx_color_top"
+                        },
+                        {
+                            "texture": "#jmx_tex_top",
+                            "material": "#jmx_mat_top",
+                            "tag": "#jmx_tag_top",
+                            "color": "#jmx_color_top"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "name": "south",
+            "from": [
+                1,
+                8,
+                14.98
+            ],
+            "to": [
+                15,
+                15,
+                14.98
+            ],
+            "faces": {
+                "north": {
+                    "uv": [
+                        1,
+                        1,
+                        15,
+                        8
+                    ],
+                    "texture": "#side",
+                    "jmx_layers": [
+                        {
+                            "texture": "#jmx_tex_side",
+                            "material": "#jmx_mat_side",
+                            "tag": "#jmx_tag_side",
+                            "color": "#jmx_color_side"
+                        },
+                        {
+                            "texture": "#jmx_tex_side",
+                            "material": "#jmx_mat_side",
+                            "tag": "#jmx_tag_side",
+                            "color": "#jmx_color_side"
+                        },
+                        {
+                            "texture": "#jmx_tex_side",
+                            "material": "#jmx_mat_side",
+                            "tag": "#jmx_tag_side",
+                            "color": "#jmx_color_side"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "name": "north",
+            "from": [
+                1,
+                8,
+                1.02
+            ],
+            "to": [
+                15,
+                15,
+                1.02
+            ],
+            "faces": {
+                "south": {
+                    "uv": [
+                        1,
+                        1,
+                        15,
+                        8
+                    ],
+                    "texture": "#side",
+                    "jmx_layers": [
+                        {
+                            "texture": "#jmx_tex_side",
+                            "material": "#jmx_mat_side",
+                            "tag": "#jmx_tag_side",
+                            "color": "#jmx_color_side"
+                        },
+                        {
+                            "texture": "#jmx_tex_side",
+                            "material": "#jmx_mat_side",
+                            "tag": "#jmx_tag_side",
+                            "color": "#jmx_color_side"
+                        },
+                        {
+                            "texture": "#jmx_tex_side",
+                            "material": "#jmx_mat_side",
+                            "tag": "#jmx_tag_side",
+                            "color": "#jmx_color_side"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "name": "east",
+            "from": [
+                14.98,
+                8,
+                1
+            ],
+            "to": [
+                14.98,
+                15,
+                15
+            ],
+            "faces": {
+                "west": {
+                    "uv": [
+                        1,
+                        1,
+                        15,
+                        8
+                    ],
+                    "texture": "#side",
+                    "jmx_layers": [
+                        {
+                            "texture": "#jmx_tex_side",
+                            "material": "#jmx_mat_side",
+                            "tag": "#jmx_tag_side",
+                            "color": "#jmx_color_side"
+                        },
+                        {
+                            "texture": "#jmx_tex_side",
+                            "material": "#jmx_mat_side",
+                            "tag": "#jmx_tag_side",
+                            "color": "#jmx_color_side"
+                        },
+                        {
+                            "texture": "#jmx_tex_side",
+                            "material": "#jmx_mat_side",
+                            "tag": "#jmx_tag_side",
+                            "color": "#jmx_color_side"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "name": "west",
+            "from": [
+                1.02,
+                8,
+                1
+            ],
+            "to": [
+                1.02,
+                15,
+                15
+            ],
+            "faces": {
+                "east": {
+                    "uv": [
+                        1,
+                        1,
+                        15,
+                        8
+                    ],
+                    "texture": "#side",
+                    "jmx_layers": [
+                        {
+                            "texture": "#jmx_tex_side",
+                            "material": "#jmx_mat_side",
+                            "tag": "#jmx_tag_side",
+                            "color": "#jmx_color_side"
+                        },
+                        {
+                            "texture": "#jmx_tex_side",
+                            "material": "#jmx_mat_side",
+                            "tag": "#jmx_tag_side",
+                            "color": "#jmx_color_side"
+                        },
+                        {
+                            "texture": "#jmx_tex_side",
+                            "material": "#jmx_mat_side",
+                            "tag": "#jmx_tag_side",
+                            "color": "#jmx_color_side"
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "jmx": {
+        "textures": {
+            "layered_textures": [
+                {
+                    "jmx_tex_bottom": "#jmx_tex_block/sculk_shrieker_bottom",
+                    "jmx_tex_side": "#jmx_tex_block/sculk_shrieker_side",
+                    "jmx_tex_top": "#jmx_tex_block/sculk_shrieker_top",
+                    "jmx_tex_inner_top": "#jmx_tex_block/sculk_shrieker_inner_top"
+                },
+                {
+                    "jmx_tex_bottom": "#jmx_tex_block/sculk_shrieker_bottom",
+                    "jmx_tex_side": "#jmx_tex_block/sculk_shrieker_side",
+                    "jmx_tex_top": "#jmx_tex_block/sculk_shrieker_top",
+                    "jmx_tex_inner_top": "#jmx_tex_block/sculk_shrieker_inner_top"
+                },
+                {
+                    "jmx_tex_bottom": "#jmx_tex_block/sculk_shrieker_bottom",
+                    "jmx_tex_side": "#jmx_tex_block/sculk_shrieker_side",
+                    "jmx_tex_top": "#jmx_tex_block/sculk_shrieker_top",
+                    "jmx_tex_inner_top": "#jmx_tex_block/sculk_shrieker_inner_top"
+                }
+            ],
+            "particle": "#jmx_tex_particle"
+        },
+        "materials": [
+            {
+                "jmx_mat_bottom": "#jmx_mat_block/sculk_shrieker_bottom",
+                "jmx_mat_side": "#jmx_mat_block/sculk_shrieker_side",
+                "jmx_mat_top": "#jmx_mat_block/sculk_shrieker_top",
+                "jmx_mat_inner_top": "#jmx_mat_block/sculk_shrieker_inner_top"
+            },
+            {
+                "jmx_mat_bottom": "#jmx_mat_block/sculk_shrieker_bottom",
+                "jmx_mat_side": "#jmx_mat_block/sculk_shrieker_side",
+                "jmx_mat_top": "#jmx_mat_block/sculk_shrieker_top",
+                "jmx_mat_inner_top": "#jmx_mat_block/sculk_shrieker_inner_top"
+            },
+            {
+                "jmx_mat_bottom": "#jmx_mat_block/sculk_shrieker_bottom",
+                "jmx_mat_side": "#jmx_mat_block/sculk_shrieker_side",
+                "jmx_mat_top": "#jmx_mat_block/sculk_shrieker_top",
+                "jmx_mat_inner_top": "#jmx_mat_block/sculk_shrieker_inner_top"
+            }
+        ],
+        "tags": [
+            {
+                "jmx_tag_bottom": "#jmx_tag_block/sculk_shrieker_bottom",
+                "jmx_tag_side": "#jmx_tag_block/sculk_shrieker_side",
+                "jmx_tag_top": "#jmx_tag_block/sculk_shrieker_top",
+                "jmx_tag_inner_top": "#jmx_tag_block/sculk_shrieker_inner_top"
+            },
+            {
+                "jmx_tag_bottom": "#jmx_tag_block/sculk_shrieker_bottom",
+                "jmx_tag_side": "#jmx_tag_block/sculk_shrieker_side",
+                "jmx_tag_top": "#jmx_tag_block/sculk_shrieker_top",
+                "jmx_tag_inner_top": "#jmx_tag_block/sculk_shrieker_inner_top"
+            },
+            {
+                "jmx_tag_bottom": "#jmx_tag_block/sculk_shrieker_bottom",
+                "jmx_tag_side": "#jmx_tag_block/sculk_shrieker_side",
+                "jmx_tag_top": "#jmx_tag_block/sculk_shrieker_top",
+                "jmx_tag_inner_top": "#jmx_tag_block/sculk_shrieker_inner_top"
+            }
+        ],
+        "colors": [
+            {
+                "jmx_color_bottom": "#jmx_color_block/sculk_shrieker_bottom",
+                "jmx_color_side": "#jmx_color_block/sculk_shrieker_side",
+                "jmx_color_top": "#jmx_color_block/sculk_shrieker_top",
+                "jmx_color_inner_top": "#jmx_color_block/sculk_shrieker_inner_top"
+            },
+            {
+                "jmx_color_bottom": "#jmx_color_block/sculk_shrieker_bottom",
+                "jmx_color_side": "#jmx_color_block/sculk_shrieker_side",
+                "jmx_color_top": "#jmx_color_block/sculk_shrieker_top",
+                "jmx_color_inner_top": "#jmx_color_block/sculk_shrieker_inner_top"
+            },
+            {
+                "jmx_color_bottom": "#jmx_color_block/sculk_shrieker_bottom",
+                "jmx_color_side": "#jmx_color_block/sculk_shrieker_side",
+                "jmx_color_top": "#jmx_color_block/sculk_shrieker_top",
+                "jmx_color_inner_top": "#jmx_color_block/sculk_shrieker_inner_top"
+            }
+        ]
+    },
+    "jmx_version": 1
+}

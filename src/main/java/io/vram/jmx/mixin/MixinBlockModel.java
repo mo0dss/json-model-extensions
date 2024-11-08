@@ -150,7 +150,6 @@ public abstract class MixinBlockModel implements JsonBlockModelExt {
 		}
 	}
 
-	@SuppressWarnings("unchecked")
 	@Inject(at = @At("HEAD"), method = "bake(Lnet/minecraft/client/resources/model/ModelBaker;Ljava/util/function/Function;Lnet/minecraft/client/resources/model/ModelState;)Lnet/minecraft/client/resources/model/BakedModel;", cancellable = true)
 	public void onBake(ModelBaker modelBaker, Function<Material, TextureAtlasSprite> function, ModelState modelState, CallbackInfoReturnable<BakedModel> cir) {
 		final BlockModel me = (BlockModel) (Object) this;
@@ -164,22 +163,19 @@ public abstract class MixinBlockModel implements JsonBlockModelExt {
 		// and not using JMX for vanilla, then use vanilla builder
 		if (jmxModelExt == null || (!Configurator.loadVanillaModels && jmxModelExt.hierarchyIsEmpty())) {
 			boolean isVanilla = true;
-			final Iterator<BlockElement> elements = me.getElements().iterator();
 
-			while (isVanilla && elements.hasNext()) {
-				final BlockElement element = elements.next();
-				final Iterator<BlockElementFace> faces = element.faces.values().iterator();
+      for (var it = me.getElements().iterator(); isVanilla && it.hasNext(); ) {
+        final var element = it.next();
 
-				while (faces.hasNext()) {
-					final BlockElementFace face = faces.next();
-					final FaceExtData faceExt = ((JmxExtension<FaceExtData>) (Object) face).jmx_ext();
+        for (var key : element.faces.keySet()) {
+          final var faceExt = FaceExtData.from(element.faces.get(key));
 
-					if (faceExt != null && !faceExt.isEmpty()) {
-						isVanilla = false;
-						break;
-					}
-				}
-			}
+          if (faceExt != null && !faceExt.isEmpty()) {
+            isVanilla = false;
+            break;
+          }
+        }
+      }
 
 			if (isVanilla) {
 				return;
